@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>vue点击切换改变内容</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        table{border:1px solid #eee}
+        tr{
+            height: 30px;
+            width:100px;
+            border-bottom: 1px solid #eee;
+        }
+        input{
+            margin:5px 0px;
+            height:24px;
+            line-height: 24px;
+        }
+        th{
+            text-align: left;
+            padding:10px
+        }
+        td{
+            width:200px;
+            padding:10px
+        }
+        .even{background: #eee;}
+        span{
+            display: inline-block;
+            width:50px;
+            text-align: right;
+        }
+        .create{
+            margin-top:10px;
+            margin-left: 50px;
+            width:80px;
+            border: 1px solid #36f;
+            padding:5px 0px;
+        }
+        button{
+            border: 0;
+            color: #000;
+            padding:5px 5px;
+            background: none;
+            color: #36f;
+        }
+
+    </style>
+
+
+</head>
+<body>
+<div id="app">
+    <div>
+        <span class="">Name:</span>
+        <input v-model="newPerson.name">
+        <br>
+        <span>Age:</span>
+        <input v-model="newPerson.age">
+        <br>
+        <span>Sex:</span>
+        <select v-model="newPerson.sex">
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+        <br>
+        <button  class="create" @click="create">Create</button>
+        <br>
+        <br>
+        <table  cellspacing="0" cellpadding="0">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Oper</th>
+            </tr>
+            <tr v-for="(person, index) in people"  :class="index%2==0?'even':'odd'">
+                <td>{{person.name}}</td>
+                <td>{{person.age}}</td>
+                <td>{{person.sex}}</td>
+                <td><button @click="del(index)">Delete</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+<script type="text/javascript">
+    new Vue({
+        el:"#app",
+        data: {
+            people: [
+                {name: 'Jack',age: '30',sex: 'Male'},
+                {name: 'Rose',age: '27',sex: 'Female'}
+            ],
+            newPerson:{
+                name: '',
+                age: '  ',
+                sex: 'Male'
+            }
+        },
+        methods:{
+            del: function(index){
+                this.people.splice(index, 1);
+            },
+            create(){
+                if (this.newPerson.name == '' || this.newPerson.age == '') {
+                    this.warnCreate = 'Please fullfill all the required items!'
+                } else {
+                    this.people.push(this.newPerson)
+                    //添加完newPerson对象后，重置它
+                    this.newPerson = {
+                        name: '',
+                        age: '0',
+                        sex: 'Male'
+                    }
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

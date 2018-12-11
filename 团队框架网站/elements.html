@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>UI Elements</title>
+    <link rel="stylesheet" href="assets/css/style11.css">
+    <link rel="stylesheet" href="assets/css/index11.css">
+    <link rel="stylesheet" href="assets/css/elenments.css">
+    <script src="assets/js/echarts.min.js"></script>
+    <style>
+    @media screen and (min-width:740px) and (max-width:970px){
+        .row .simple,.button>.button,.dropdown{width: 100%;margin-bottom: 20px}
+        .row .progress{margin-top: 0px}
+    }
+    @media screen and (max-width:740px){
+        header{height: 120px;}
+        header section.l,section.r{float: none;}
+        .menu{display: block;}
+        .nav{margin-left: -260px}
+        .contentBox{margin-left: 0px}
+        /*.row .col{float: none;width:100%; margin-bottom:36px}*/
+        .row .simple,.button>.button,.dropdown{width: 100%;margin-bottom: 20px}
+        .row .progress{margin-top: 0px}
+    }
+    </style>
+</head>
+<body>
+    <div id="bigBox">
+        <header>
+            <section class="l">
+                <a href="index.html" class="l">
+                    <i class="iconfont">&#xe714;</i>
+                    <strong>HYBRID</strong>
+                </a>
+                <div class="menu r" >
+                    <i class="iconfont">&#xe611;</i>
+                </div>
+            </section>
+            <section class="r">
+                <ul>
+                    <li class="l">
+                        <i class="iconfont">&#xe60b;</i>
+                        <i class="iconfont">&#xe606;</i>
+                    </li>
+                    <li class="l">
+                        <i class="iconfont">&#xe611;</i>
+                        <i class="iconfont">&#xe606;</i>
+                    </li>
+                    <li class="l">
+                        <i class="iconfont">&#xe601;</i>
+                        <i class="iconfont">&#xe606;</i>
+                    </li>
+                    <li class="l">
+                        <i class="iconfont">&#xe60c;</i>
+                        <i class="iconfont">&#xe606;</i>
+                    </li>
+                </ul>
+            
+            
+            </section>
+            
+        </header>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html" >
+                        <i class="iconfont">&#xe6a4;</i>
+                        Dashboard
+                </a></li>
+                <li><a href="elements.html" class="cur">
+                        <i class="iconfont">&#xe505;</i>
+                        UI Elements
+                </a></li>
+                <li><a href="charts.html">
+                        <i class="iconfont">&#xe698;</i>
+                        Charts
+                </a></li>
+                <li><a href="tabs.html">
+                        <i class="iconfont">&#xe640;</i>
+                        Tabs & Panels
+                </a></li>
+                <li><a href="tables.html">
+                        <i class="iconfont">&#xe64e;</i>
+                        Tables
+                </a></li>
+                <li><a href="forms.html">
+                        <i class="iconfont">&#xe9ca;</i>
+                        Forms
+                </a></li>
+                <li><a href="">
+                        <i class="iconfont">&#xe501;</i>
+                        Mulit
+                </a></li>
+                <li><a href="">
+                        <i class="iconfont">&#xe638;</i>
+                        Empty Page
+                </a></li>
+            </ul>
+            <div class="toggle">
+               <i class="iconfont">&#xe502;</i>
+            </div>
+        </div>
+        <div class="contentBox">
+            <div class="content">
+                <div class="title">
+                    <p><span>UI Elements</span> This is your UI elements section</p>
+                </div>
+                <div class="row messages rel">
+                   <div class="center rel">
+                       <div class="titles">Messages</div>
+                       <div class="tips rel">
+                            <p><span>Well done! </span>You successfully read this important alert message.</p>
+                       </div>
+                       <div class="tips rel">
+                            <p><span>Heads up!</span> This alert needs your attention, but it's not super important.</p>
+                        </div>
+                        <div class="tips rel">
+                            <p><span>Warning!</span> Best check yo self, you're not looking too good.</p>
+                        </div>
+                        <div class="tips rel">
+                            <p><span>Oh snap!</span> Change a few things up and try submitting again.</p>
+                        </div>
+                   </div>
+                </div>
+                <div class="row progress">
+                    <div class="simple center rel l">
+                        <div class="col rel">
+                            <div class="titles">Animated Progress Bars</div>
+                            <div class="bar">
+                                <div></div>
+                            </div>
+                            <div class="bar">
+                                <div></div>
+                            </div>
+                            <div class="bar">
+                                <div></div>
+                            </div>
+                            <div class="bar">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="simple center rel l">
+                        <div class="col rel">
+                            <div class="titles">Progress Bars</div>
+                            <div class="bar">
+                                <div></div>
+                            </div>
+                            <div class="bar">
+                                <div></div>
+                            </div>
+                            <div class="bar">
+                                <div></div>
+                            </div>
+                            <div class="bar">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row animate progress">
+                    <div class="simple center rel l">
+                        <div class="col rel">
+                            <div class="titles">Animated Progress Bars</div>
+                            <div class="bar">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="simple center rel l">
+                        <div class="col rel">
+                            <div class="titles">Stacked Progress Bars </div>
+                            <div class="bar">
+                                <div class="l success"></div>
+                                <div class="l warning"></div>
+                                <div class="l danger"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row button progress">
+                     <div class="button simple center rel l ">
+                        <div class="col rel">
+                            <div class="titles">Simple Buttons Examples </div>
+                            <div class="body">
+                                <p>Default Button</p>
+                                <a>default</a>
+                                <a class="primary">primary</a>
+                                <a class="danger">danger</a>
+                                <a class="success">success</a>
+                                <a class="info">info</a>
+                                <a class="warning">warning</a>
+                                <p>Small Button</p>
+                                <a class="small">default</a>
+                                <a class="primary small">primary</a>
+                                <a class="danger small">danger</a>
+                                <a class="success small">success</a>
+                                <a class="info small">info</a>
+                                <a class="warning small">warning</a>
+                                <p>Large Button</p>
+                                <a class="large">default</a>
+                                <a class="primary large">primary</a>
+                                <a class="danger large">danger</a>
+                                <a class="success large">success</a>
+                                <a class="info large">info</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown simple center rel l ">
+                        <div class="col rel">
+                            <div class="titles">Button Dropdowns </div>
+                            <div class="body">
+                                <p>Simple Button Dropdown Examples</p>
+                                <a>default</a>
+                                <a class="primary">primary</a>
+                                <a class="danger">danger</a>
+                                <a class="success">success</a>
+                                <a class="info">info</a>
+                                <a class="warning">warning</a>
+                                <p>Split Button Dropdown Examples</p>
+                                <a >default</a>
+                                <a class="primary ">primary</a>
+                                <a class="danger ">danger</a>
+                                <a class="success ">success</a>
+                                <a class="info ">info</a>
+                                <p>Buttons With Icons</p>
+                                <a>Update</a>
+                                <a class="primary">Edit</a>
+                                <a class="danger ">delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row progress">
+                     <div class="simple center rel l ">
+                        <div class="col rel">
+                            <div class="titles">Circle Icon Buttons</div>
+                            <div class="circle body">
+                                <a>√</a>
+                                <a class="primary">√</a>
+                                <a class="danger">√</a>
+                                <a class="success">√</a>
+                                <a class="info">√</a>
+                                <a class="warning">√</a>
+                                <p>Get more components at official bootstrap website i.e getbootstrap.com or <span>click here </span>.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown simple center rel l ">
+                        <div class="col rel">
+                            <div class="titles">Circle Icon Buttons</div>
+                            <div class="circle body">
+                                <a>√</a>
+                                <a class="primary">√</a>
+                                <a class="danger">√</a>
+                                <a class="success">√</a>
+                                <a class="info">√</a>
+                                <a class="warning">√</a>
+                                <p>Get more Icons at official fortawesome website <span>Click here</span>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row progress">
+                     <div class="simple center rel l ">
+                        <div class="col rel">
+                            <div class="titles">Modals Example</div>
+                            <div class="modal body">
+                                <a>Click Lunch Demo Modal</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown simple center rel l ">
+                        <div class="col rel">
+                            <div class="titles">Sample Text</div>
+                            <div class="circle body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et doloreullamco laboris nisi ut aliquip ex ea commodo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer><p>Copyright © 2016.Company name All rights reserved.</p></footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="assets/js/indexgr11.js"></script>

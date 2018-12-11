@@ -1,0 +1,226 @@
+
+#bigBox{
+    width:100%; 
+    height: 100%;
+    overflow: hidden;
+}
+header{
+    width:100%; 
+    overflow: hidden; 
+}
+header img{
+    width:100%; 
+    height: 100%;
+}
+.contentBox{
+    overflow: hidden;
+    min-height: 5px;
+    /* background: #0f0; */
+}
+.left,.right{
+    width:26%;
+    overflow: hidden;
+    min-height: 300px;
+    /* background: #0f0; */
+    float: left;
+}
+.center{
+    width:48%;
+    /* background: #ffc; */
+    min-height: 300px;
+    float: left;
+}
+/* -------------------------------------
+                农林牧渔业
+---------------------------------------*/
+.left .row{
+    width:100%;
+    overflow: hidden;
+    border-bottom: 1px solid #0f141f;
+}
+.left .top{
+    height: 97px;
+    width:100%;
+    /* background: #ff0;  */
+}
+.title{
+    width:26%;
+    /* background: #fcc; */
+    /* text-align: center; */
+    padding-left: 2px;
+    line-height: 50px;
+    font-size: 18px;
+    color:#909394;
+    font-weight: bold;
+}
+.left .top .bar{
+    width: 74%;
+    /* background: #f00; */
+    height: 100%;
+}
+.left .down{
+    height: 127px;
+    width: 100%;
+}
+.t{
+    width:100%;
+    text-align: left;
+    padding-left:2px;
+    height: 51px;
+}
+.zhu{
+    height: 100px;
+    width: 100%;
+}
+.d{
+    overflow: hidden;
+    width:100%;
+}
+.mao{
+    width:50%;
+    text-align: center;
+    color:#fff;
+    font-size: 14px;
+}
+.mao img{
+    margin:0 auto;
+}
+.mao p{
+    line-height: 40px;
+}
+#bar2{
+    width:45%;
+    height: 75px;
+}
+#zhu2,#zhu3,#bar3{
+    width:55%;
+    height: 100px;
+}
+#zhu3,#bar3{
+    width:50%;
+    height: 100px;
+}
+.data{
+    overflow: hidden;
+    width:100%;
+}
+.data .team{
+    width:33.333%;
+    text-align: center
+}
+.data .team span{
+    display: block;
+    color:#fff;
+    line-height: 40px;
+}
+
+.data .team span:last-child{
+    font-size:16px;
+    line-height: 25px;
+    font-weight: bold;
+}
+.top{
+    overflow: hidden
+}
+.model{
+    width:50%;
+    overflow: hidden;
+    text-align: left;
+    padding-left:20px;
+    padding-bottom: 30px;
+}
+.top .model span{
+    display: block;
+    color:#fff;
+    line-height: 40px;
+}
+
+.top .model span:last-child{
+    font-size:16px;
+    line-height: 25px;
+    font-weight: bold;
+}
+#zhu4{
+    width:100%;
+    height: 100px;
+}
+.right>.row{
+    border:1px solid #080d17;
+}
+
+.center .model{
+    width:25%;
+}
+.center .first {
+    padding:32px 0 10px;
+}
+.center .first span{
+    font-size: 16px;
+}
+.center .first span:last-child{
+    font-size: 26px;
+    line-height: 44px;
+    font-weight: 100;
+}
+.center .title{
+    font-size: 26px;
+}
+.center .second,.third{
+    margin:0 26px;
+}
+
+.center #zhu5{
+    width:90%;
+    height: 266px;
+    /* background: #fcc */
+}
+.center .third{
+    background: #071725;
+    overflow: hidden;
+    
+}
+.third h3{
+    color:#fff;
+    font-size: 18px;
+    font-weight: 100;
+    padding:0 14px;
+    /* line-height: 22px; */
+}
+
+.third .down{
+    width:100%;
+    overflow: hidden;
+}
+.third .down .data{
+    width:40%;
+    /* background: #ffc; */
+}
+.third .down .data .col{
+    width:100%;
+    height: 53px;
+    line-height: 53px;
+}
+.third .down .data .col span{
+    /* width:100%; */
+    display: block;
+    padding-left:14px;
+    padding-right: 2px;
+    color:#fff;
+}
+.pic{
+    width:60%;
+    height: 165px;
+    /* background: #ffc; */
+}
+.pic #one,#two,#three{
+    width:33.333%;
+    height: 165px;
+}
+#tu{
+    width:100%;
+    height: 195px;
+    /* background: #fcc; */
+}
+
+
+

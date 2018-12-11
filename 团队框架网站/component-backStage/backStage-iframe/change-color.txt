@@ -1,0 +1,26 @@
+<template>
+    <div class="nice-wrap">
+        <div v-for="(list,index) in singer" class="aa" :class="{ bgColor:changeRed == index}" @click="change(index)">{{list.a}}</div>
+    </div>
+</template>
+<script>
+export default {
+  	name: 'changeColor',
+    data(){
+        return{
+            singer:[
+                {"a":"青春活泼的心，决不作悲哀的留滞。"},
+                {"a":"青年人！你不能像风般飞扬，便应当像山般静止。"},
+                {"a":"青年人呵！为着后来的回忆，小心着意的指你现在的图画。"},
+                {"a":"青年人！信你自己罢！只有你自己是真实的，也只有你能够创造你自己。"}
+            ],
+            changeRed:-1
+        }
+    },
+    methods:{
+        change(index){
+            this.changeRed = index;
+        }
+    }
+});
+</script>

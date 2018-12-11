@@ -1,0 +1,32 @@
+<!--html部分-->
+<div id="app">
+    <div class="nice-tab">
+        <ul>
+            <li v-for="(item,index) in tabs" :class="{active:index == num}"  @click="tab(index)">
+		{{item}}
+	    </li>
+        </ul>
+    <div class="nice-tab-wrap">
+        <div class="nice-tab-con" v-for='(itemCon,index) in tabContents' v-show=" index == num">
+	    {{itemCon}}
+	</div>
+    </div>
+</div>
+
+//js部分
+var vm = new Vue({
+    el: '#app',
+    data: {
+        abs: ["标题一", "标题二"],
+        tabContents: [
+            "标题一的内容",
+            "标题二的内容"
+        ],
+        num: 0
+        },
+     methods: {
+        tab(index) {
+            this.num = index;
+        }
+    }
+});

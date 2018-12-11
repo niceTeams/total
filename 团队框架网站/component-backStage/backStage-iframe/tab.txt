@@ -1,0 +1,30 @@
+<template>
+    <div class="nice-tab">
+        <ul>
+            <li v-for="(item,index) in tabs" :class="{active:index == num}"  @click="tab(index)">{{item}}</li>
+        </ul>
+        <div class="nice-tab-wrap">
+            <div class="nice-tab-con" v-for='(itemCon,index) in tabContents' v-show=" index == num">{{itemCon}}</div>
+        </div>
+    </div>
+</template>
+<script>
+export default {
+  	name: 'Tab',
+    data(){
+        return{
+            tabs: ["标题一", "标题二","标题三"],
+            tabContents: [
+                "【一】I wanna sing I wanna shout I wanna scream till the words dry out",
+                "【二】那时候有多好，任雨打湿裙角。忍不住哼起，心爱的旋律",
+                "【三】绿油油的树叶，自由地在说笑。燕子忙归巢，风铃在舞蹈。"],
+            num: 0
+        }
+    },
+    methods: {
+        tab(index) {
+            this.num = index;
+        }
+    }
+});
+</script>

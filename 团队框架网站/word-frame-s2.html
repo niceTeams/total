@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>框架</title>
+    <link rel="stylesheet" href="assets/css/base.css"/>
+    <link rel="stylesheet" href="assets/css/word-frame.css"/>
+</head>
+<body>
+<header>
+    <div class="w">
+        <h1 class="l">
+            <a>Nice UI 文档</a>
+        </h1>
+        <ul class="r">
+            <li class="l "><a href="word-app.html">入门</a></li>
+            <li class="l appbottom"><a href="word-frame.html">框架</a></li>
+            <li class="l"><a href="component-app/component-app1.html">组件</a></li>
+        </ul>
+    </div>
+
+</header>
+<main>
+    <div class="w">
+        <div class="l">
+            <ul>
+                <li>
+                    <a href="#">基础知识</a>
+                    <ul>
+                        <li ><a href="word-frame.html">框架概述</a></li>
+                        <li><a href="#">iframe相互调用详解</a></li>
+                        <li><a href="#">示例工程目录构成</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">皮肤机制</a>
+                    <ul>
+                        <li ><a href="word-frame-s1.html">皮肤原理与参数配置</a></li>
+                        <li class="teshu"><a href="word-frame-s2.html">框架动态换肤</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">框架基础功能</a>
+                    <ul>
+                        <!-- <li><a href="word-frame-s3.html">主框架页方法</a></li> -->
+                        <!-- <li><a href="#">内容页方法</a></li> -->
+                        <li><a href="word-frame-s4.html">常用正则表达式</a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">资源索引</a>
+                    <ul>
+                        <li><a href="#">CSS库索引</a></li>
+                        <li><a href="word-frame-s5.html">基本图标库</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="r">
+            <h4>框架动态换肤</h4>
+            <hr>
+            <p>​ 不同结构的框架之间不能换肤，同一种结构才可以换肤。换肤需要服务端支持，以java工程为例</p>
+
+            <p>
+                <img src="assets/images/guide_23.png">
+            </p>
+            <p>
+                步骤：
+            </p>
+
+            <p>
+                1，某一套框架皮肤包正常应该有一个叫skin的目录，里面是皮肤资源，它是蓝色系，使用的是blue组件库主题。拷贝另一套相同结构的主页皮肤到这里来，起不一样的名字，例如叫newSkin，这套皮肤是绿色系，使用的是green组件库主题。
+            </p>
+            <p>
+                2，创建一个叫skin.jsp的文件，用于通过session存储换肤时的配置。该文件代码如下：
+            </p>
+
+            <p class="code">
+                &lt;%@page contentType="text/html" pageEncoding="UTF-8"%&gt;<br>
+                &lt;%<br>
+                session.setAttribute("skinName",request.getParameter("skinName"));<br>
+                session.setAttribute("themeColor",request.getParameter("themeColor"));<br>
+                %&gt;<br>
+                &lt;% String path = request.getContextPath();%&gt;<br>
+                &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;<br>
+                &lt;html xmlns="http://www.w3.org/1999/xhtml"><br>
+                &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;<br>
+                &lt;head&gt;<br>
+                &lt;script&gt;<br>
+                top.window.location="<%=path%>/system/layout/main.jsp";<br>
+                &lt;/script&gt;<br>
+                &lt;/head&gt;<br>
+                &lt;body&gt;<br>
+
+                &lt;/body&gt;<br>
+                &lt;/html&gt;
+            </p>
+            <p>3，在主页顶部写如下代码，设置默认的皮肤。注意要写在dtd声明的下方</p>
+            <p class="code">
+                &lt;%<br>
+                if(session.getAttribute("skinName")==null){<br>
+                session.setAttribute("skinName","skin");<br>
+                session.setAttribute("themeColor","blue");<br>
+                }<br>
+                %&gt;
+            </p>
+
+            <p>4，主框架的皮肤配置改为读取session的形式</p>
+            <p class="code">
+                &lt;link href="<%=path%>/libs/css/import_basic.css" rel="stylesheet" type="text/css"/&gt;<br>
+                &lt;link href="<%=path%>/libs/skins/<%=session.getAttribute("themeColor")%>/style.css" rel="stylesheet" type="text/css" id="theme" themeColor="<%=session.getAttribute("themeColor")%>"/&gt;<br>
+                &lt;link href="<%=path%>/system/layout/<%=session.getAttribute("skinName")%>/style.css" rel="stylesheet" type="text/css" id="skin"  skinPath="system/layout/<%=session.getAttribute("skinName")%>/"/&gt;<br>
+                &lt;script type="text/javascript" src="<%=path%>/libs/js/jquery.js"&gt;&lt;/script&gt;<br>
+                &lt;script type="text/javascript" src="<%=path%>/libs/js/main.js"&gt;&lt;/script&gt;
+            </p>
+
+            <p>5，在主页最底部将skin.jsp作为iframe嵌入</p>
+            <p class="code">
+                &lt;iframe id="sessionSkin" src="" width="0" height="0" style="display:none;"&gt;&lt;/iframe&gt;
+            </p>
+            <p>6，点击切换皮肤时调用changeSkin()方法,参数分别为皮肤包名称和主题风格</p>
+            <p class="code">
+                &lt;li onclick="changeSkin('green','newSkin')" class="color2">&lt;/li&&gt;&lt;/&gt;
+            </p>
+            <p>7，在主页上实现changeSkin()方法</p>
+            <p class="code">
+                function changeSkin(themeColor,skinName){<br>
+                top.Dialog.confirm("确定应用该皮肤吗？",function(){<br>
+                document.getElementById("sessionSkin").src=<br>
+                "<%=path%>/system/layout/skin.jsp?skinName="+skinName+"&themeColor="+themeColor;<br>
+                })<br>
+                }
+            </p>
+
+
+        </div>
+    </div>
+
+</main>
+
+</body>
+</html>

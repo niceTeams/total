@@ -1,0 +1,66 @@
+<template>
+<div>
+        <span class="">Name:</span>
+        <input v-model="newPerson.name">
+        <br>
+        <span>Age:</span>
+        <input v-model="newPerson.age">
+        <br>
+        <span>Sex:</span>
+        <select v-model="newPerson.sex">
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+        <br>
+        <button  class="create" @click="create">Create</button>
+        <br>
+        <br>
+        <table  cellspacing="0" cellpadding="0">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Oper</th>
+            </tr>
+            <tr v-for="(person, index) in people"  :class="index%2==0?'even':'odd'">
+                <td>{{person.name}}</td>
+                <td>{{person.age}}</td>
+                <td>{{person.sex}}</td>
+                <td><button>Delete</button></td>
+            </tr>
+        </table>
+    </div>
+</template>
+<script>
+export default {
+  	name: 'InsertInfo',
+    data(){
+        return{
+            people: [
+                {name: 'Jack',age: '30',sex: 'Male'},
+                {name: 'Rose',age: '27',sex: 'Female'}
+            ],
+            newPerson:{
+                name: '',
+                age: '  ',
+                sex: 'Male'
+            }
+        }
+    },
+    methods:{
+        create(){
+            if (this.newPerson.name == '' || this.newPerson.age == '') {
+                this.warnCreate = 'Please fullfill all the required items!'
+            } else {
+                this.people.push(this.newPerson)
+                //添加完newPerson对象后，重置它
+                this.newPerson = {
+                    name: '',
+                    age: '0',
+                    sex: 'Male'
+                }
+            }
+        }
+    }
+})
+</script>

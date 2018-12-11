@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/base.css"/>
+    <link rel="stylesheet" href="assets/css/word-app.css"/>
+</head>
+<body>
+<header>
+    <div class="w">
+        <h1 class="l">
+            <a>Nice UI 文档</a>
+        </h1>
+        <ul class="r">
+            <li class="l appbottom"><a href="word-app.html">入门</a></li>
+            <li class="l"><a href="word-frame.html">框架</a></li>
+            <li class="l"><a href="component-app/component-app1.html">组件</a></li>
+        </ul>
+    </div>
+
+</header>
+<main>
+    <div class="w">
+        <div class="l">
+            <ul>
+                <li>
+                    <a href="#">开发</a>
+                    <ul>
+                        <li ><a href="word-app.html" >快速上手</a></li>
+                        <li class="teshu"><a href="word-app-door1.html">创建内容页</a></li>
+                        <li><a href="word-app-door2.html">界面搭建原则</a></li>
+                    </ul>
+                </li>
+                <!--<li>-->
+                <!--<a href="#">运行</a>-->
+                <!--<ul>-->
+                <!--<li><a href="#">运行app示例工程</a></li>-->
+                <!--<li><a href="#">运行.NET示例工程</a></li>-->
+                <!--<li><a href="#">界面搭建原则</a></li>-->
+                <!--</ul>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <div class="r">
+            <h4>创建内容页</h4>
+            <hr>
+            <h5>内容页格式</h5>
+            <p>​ 首先，页面要有dtd声明的头部。</p>
+            <p class="code">​ &lt;DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-<br/>transitional.dtd"&gt;</p>
+            <p>
+                这段用于通知浏览器按什么标准解析CSS，很多开发人员会不注意而把这个删掉，容易导致各种莫名其妙的问题。
+            </p>
+            <p>
+                然后每个内容页面头部都需要引入框架所需要的资源文件。如下：
+            </p>
+            <p class="code">​
+                <!--< type="text/javascript" src="../../libs/js/jquery.js"/&gt;<br/>-->
+                <!--&lt; type="text/javascript" src="../../libs/js/language/cn.js"/&gt;<br/>-->
+                <!--&lt; type="text/javascript" src="../../libs/js/framework.js"/&gt;<br/>-->
+                &lt; href="../../assets/css/public.css" rel="stylesheet" type="text/css"/&gt;<br/>
+                <!--&lt; rel="stylesheet" type="text/css" id="skin" prePath="../../"/&gt;<br/>-->
+                <!--&lt; rel="stylesheet" type="text/css" id="customSkin"/&gt;-->
+            </p>
+            <p>
+                关于每段引入的作用以及prePath的配置，会在“框架”栏目中详细展开。
+            </p>
+
+            <p>页面内容区域最好用class="page_content"的div作为主容器。这个class由框架皮肤定义，用来设置内容区域的两边留白等处理。</p>
+            <p class="code">​ &lt;div class="page_content"&gt;
+                <br/> 内容部分<br/>
+                &lt;/div&gt;</p>
+
+
+            <p>
+                也可以使用Nice UI提供的基础模板页面，是一样的。
+            </p>
+
+            <h5>脚本按需引入</h5>
+            <p>使用组件时，基本的组件不必单独引入脚本，例如文本框，单选下拉框，table等，其余大部分组件需要按需引入相应的组件脚本。见具体每个组件的文档说明。</p>
+
+        </div>
+
+    </div>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>component-app1-preview</title>
+<link rel="stylesheet" type="text/css" href="css/public.css"/>
+<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+<link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+<link rel="stylesheet" type="text/css" href="css/component-app1-preview.css" />
+</head>
+<body>
+<div id="bodyBox">
+    <header>
+        <div class="location">
+            <i class="iconfont icon-location"></i>
+            定位
+        </div>
+        <a href="#" class="search">
+            <i class="iconfont icon-search"></i>
+            <p class="searchText">搜索框</p>
+        </a>
+        <div class="icons">
+            <i class="iconfont icon-saoyisao"></i>
+            <i class="iconfont icon-message"></i>
+        </div>
+    </header>
+    <div class="content">
+        1<br/>2<br/>3<br/>4<br/>5<br/>
+        6<br/>7<br/>8<br/>9<br/>10<br/>
+        11<br/>12<br/>13<br/>14<br/>15<br/>
+        16<br/>17<br/>18<br/>19<br/>20<br/>
+        21<br/>22<br/>23<br/>24<br/>25<br/>
+        26<br/>27<br/>28<br/>29<br/>20<br/>
+        31<br/>32<br/>33<br/>34<br/>35<br/>
+        36<br/>37<br/>38<br/>39<br/>40<br/>
+    </div>
+</div>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/vue.js"></script>
+<script>
+(function(){
+    new Vue({
+        el:'#bodyBox',
+        methods:{
+          
+        },
+        mounted(){
+                $(".content").scroll(function () {
+                let scrolltop=$(".content").scrollTop()
+                if(scrolltop>=24){
+                    $("header").css({backgroundColor:"#fff"})
+                    $(".location").css({color:"red"})
+                    $(".icons").css({color:"red"})
+                    $(".search").css({background:"#f6f6f6"})
+                }else{
+                    $("header").css({background:"rgba(255,255,255,0)"})
+                    $(".location").css({color:"white"})
+                    $(".icons").css({color:"white"})
+                    $(".search").css({background:"#fff"})
+                }
+            })
+        }
+    })
+})()
+</script>

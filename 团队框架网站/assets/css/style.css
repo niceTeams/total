@@ -1,0 +1,17 @@
+/*=========================reset================*/
+body,h1,h2,h3,h4,h5,h6,p,a,img,ul,li,ol,dl,dt,dd,input{ padding:0; margin:0}
+ul,ol{ list-style:none;}
+input,button{ outline:none;}
+
+img{ display:block; border:0;}
+*{box-sizing: border-box;}
+body{ font-size:12px;  font-family:"微软雅黑"; background: #010610;}
+body,html{height: 100%}
+a{ text-decoration:none; color:#ccc; }
+/* a:hover{ color:#f00;} */
+/*========================public================*/
+.w{ width:1200px; margin:0 auto}
+.l{ float:left;}
+.r{ float:right}
+.red{color: red;}
+.throughLine{ text-decoration: line-through;}

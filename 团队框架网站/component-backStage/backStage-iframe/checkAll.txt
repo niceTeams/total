@@ -1,0 +1,51 @@
+<template>
+    <div class="checkAll" style="padding-left: 20px">
+        <div class="checkAll-btn">
+            <input type="checkbox" @click="selectAll" :checked="checked"/>全选
+        </div>
+        <hr>
+        <ul style="margin-bottom: 20px">
+            <li v-for="(item, index) in proData">
+                <input type="checkbox" :value="index" v-model="selectArr">{{item.name}}
+            </li>
+        </ul>
+    </div>
+</template>
+<script>
+export default {
+  	name: 'checkAll',
+	data () {
+		return{
+           	 	proData: [
+               		{"name": "张三"},
+               		{"name": "李四"},
+                    {"name": "王五"},
+                    { "name": "赵六"}
+           		],
+            		selectArr: [],
+            		checked : false
+		}
+	},
+	methods: {
+        selectAll(event){
+            if (!event.currentTarget.checked) {
+                this.selectArr = [];
+            } else { //实现全选
+                this.selectArr = [];
+                this.proData.forEach((item, i) =>{
+                    this.selectArr.push(i);
+                });
+            }
+        }
+    },
+    watch : {
+        selectArr(curVal){
+            if(curVal.length == this.proData.length){
+                this.checked = true
+            }else{
+                this.checked = false
+            }
+        }
+    },
+})
+</script>

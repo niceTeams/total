@@ -1,0 +1,22 @@
+ mounted(){
+                $(".content").scroll(function () {
+                    let scrolltop=$(".content").scrollTop()
+                    if(scrolltop>=24){
+                        $("header").css({backgroundColor:"#fff"})
+                        $(".location").css({color:"red"})
+                        $(".icons").css({color:"red"})
+
+                        $(".search").css({background:"#f6f6f6"})
+
+                    }else{$("header").css({background:"rgba(255,255,255,0)"})
+
+                        $(".location").css({color:"white"})
+
+                        $(".icons").css({color:"white"})
+
+                        $(".search").css({background:"#fff"})
+
+                    }
+
+                })
+            }

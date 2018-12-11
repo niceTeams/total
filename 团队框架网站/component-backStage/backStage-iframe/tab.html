@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" href="css/style.css">
+    <style>
+        body,h1,h2,h3,h4,h5,h6,p,a,img,ul,li,ol,dl,dt,dd,input,figure,figcaption{ padding:0; margin:0}
+        ul,ol{ list-style:none;}
+        input{ outline:none;}
+        img{ display:block; border:0;}
+        body{ font-size:14px;  color:#1c1717; font-family:"微软雅黑";background:#fff;}
+        a{ text-decoration:none; color:#1c1717;}
+        header,footer,nav,main,section,article,aside,figure,figcaption{ display:block;}
+        html,body{ height:100%;}
+        /*html{ font-size:26.67vw;}*/
+
+
+
+        *{ box-sizing:border-box}
+        .nice-tab{
+            width:594px;
+            margin:0 auto;
+        }
+        .nice-tab ul{
+            height: 40px;
+            line-height: 40px;
+            background: #ebebeb;
+        }
+        .nice-tab ul li{
+            height: 100%;
+            width:33.333%;
+            color: #000;
+            text-align: center;
+            float: left;
+        }
+        .nice-tab-wrap{
+            min-height: 100px;
+
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="nice-tab">
+        <ul>
+            <li v-for="(item,index) in tabs" :class="{active:index == num}"  @click="tab(index)">{{item}}</li>
+        </ul>
+        <div class="nice-tab-wrap">
+            <div class="nice-tab-con" v-for='(itemCon,index) in tabContents' v-show=" index == num">{{itemCon}}</div>
+        </div>
+    </div>
+</div>
+<script src="js/vue.js"></script>
+<script type="text/javascript">
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            tabs: ["标题一", "标题二","标题三"],
+            tabContents: [
+                "【一】I wanna sing I wanna shout I wanna scream till the words dry out",
+                "【二】那时候有多好，任雨打湿裙角。忍不住哼起，心爱的旋律",
+                "【三】绿油油的树叶，自由地在说笑。燕子忙归巢，风铃在舞蹈。"
+            ],
+            num: 0
+        },
+        methods: {
+            tab(index) {
+                this.num = index;
+            }
+        }
+    });
+</script>

@@ -1,0 +1,22 @@
+ @charset "utf-8";
+ .nice-tab{
+    width:500px;
+    border:1px solid #ccc;
+    margin:0 auto;
+}
+.nice-tab ul{
+    height: 40px;
+    line-height: 40px;
+    background: #ebebeb;
+}
+.nice-tab ul li{
+    height: 100%;
+    width:50%;
+    color: #000;
+    text-align: center;
+    float: left;
+}
+.nice-tab-wrap{
+    min-height: 100px;
+
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>框架</title>
+    <link rel="stylesheet" href="assets/css/base.css"/>
+    <link rel="stylesheet" href="assets/css/word-frame.css"/>
+</head>
+<body>
+<header>
+    <div class="w">
+        <h1 class="l">
+            <a>Nice UI 文档</a>
+        </h1>
+        <ul class="r">
+            <li class="l "><a href="word-app.html">入门</a></li>
+            <li class="l appbottom"><a href="word-frame.html">框架</a></li>
+            <li class="l"><a href="component-app/component-app1.html">组件</a></li>
+        </ul>
+    </div>
+
+</header>
+<main>
+    <div class="w">
+        <div class="l">
+            <ul>
+                <li>
+                    <a href="#">基础知识</a>
+                    <ul>
+                        <li ><a href="word-frame.html">框架概述</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">框架基础功能</a>
+                    <ul>
+                        <!-- <li><a href="word-frame-s3.html">主框架页方法</a></li> -->
+                        <li class="teshu"><a href="word-frame-s4.html">常用正则表达式</a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">资源索引</a>
+                    <ul>
+                        <li ><a href="word-css.html">CSS库索引</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="r">
+            <h4>常用正则表达式</h4>
+            <hr>
+            <table>
+                <thead>
+                <tr>
+                    <th>用途</th>
+                    <th>写法</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>电话号码，格<br>式：010-29292929</td>
+                    <td>^(0[0-9]{2,3}-)?([2-9][0-9]{6,7})+(-[0-9]{1,4})?$</td>
+                </tr>
+                <tr>
+                    <td>手机号码</td>
+                    <td>^0?[1][358][0-9]{9}$</td>
+                </tr>
+                <tr>
+                    <td>电子邮件地址</td>
+                    <td>^[a-zA-Z0-9_.-]+\@([a-zA-Z0-9-]+.)+[a-zA-Z0-9]{2,4}$</td>
+                </tr>
+                <tr>
+                    <td>日期</td>
+                    <td>^(([0-9]{3}[1-9] | [0-9]{2}[1-9][0-9]{1} | [0-9]{1}[1-9][0-9]{2} | [1-9][0-9]{3})-(((0[13578] | 1[02])-(0[1-9] | [12][0-9] | 3[01])) | ((0[469] | 11)-(0[1-9] | [12][0-9] | 30)) | (02-(0[1-9] | [1][0-9] | 2[0-8])))) | ((([0-9]{2})(0[48] | [2468][048] | [13579][26]) | ((0[48] | [2468][048] | [3579][26])00))-02-29)$</td>
+                </tr>
+                <tr>
+                    <td>IP</td>
+                    <td>^(?:(?:25[0-5] | 2[0-4][0-9] | [01]?[0-9][0-9]?).){3}(?:25[0-5] | 2[0-4][0-9] | [01]?[0-9][0-9]?)$</td>
+                </tr>
+                <tr>
+                    <td>中文</td>
+                    <td>^[\u4e00-\u9fa5]+$</td>
+                </tr>
+                <tr>
+                    <td>网址</td>
+                    <td>^[a-zA-z]:\/\/[^s]$</td>
+                </tr>
+                <tr>
+                    <td>邮编</td>
+                    <td>^[1-9]\d{5}$</td>
+                </tr>
+                <tr>
+                    <td>QQ号</td>
+                    <td>^[1-9]\d{4,9}$</td>
+                </tr>
+                <tr>
+                    <td>数字</td>
+                    <td>^[0-9]+$</td>
+                </tr>
+                <tr>
+                    <td>整数或小数（正负均可）</td>
+                    <td>^[-]?\d+(\.\d{1,4})?$</td>
+                </tr>
+                <tr>
+                    <td>4位以内的小数（正负均可)</td>
+                    <td>^[-]?\d+(\.\d{1,4})$</td>
+                </tr>
+                <tr>
+                    <td>不含非法字符</td>
+                    <td>^[^`{}[!(+~@#%\^&*) | \\:;\'\"><\?/=_]+$</td>
+                </tr>
+                <tr>
+                    <td>英文字母</td>
+                    <td>^[a-zA-Z]+$</td>
+                </tr>
+                <tr>
+                    <td>英文字母或数字</td>
+                    <td>^[0-9a-zA-Z]+$</td>
+                </tr>
+                <tr>
+                    <td>文件后缀</td>
+                    <td>^.*?.(jpg | jpeg | bmp | gif | png | JPG | JPEG | BMP | GIF | PNG)$</td>
+                </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+
+</main>
+
+</body>
+</html>

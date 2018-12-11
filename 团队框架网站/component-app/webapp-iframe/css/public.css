@@ -1,0 +1,51 @@
+@charset "utf-8";
+/*CSS Document*/
+body,div,p,ul,ol,li,dl,dt,dd,form,table,tr,td,hr,h1,h2,h3,h4,h5,h6,fieldset,input,figure{
+    margin:0;
+    padding:0;
+}
+html,body{
+    width:100%;
+    height: 100%;
+}
+html{
+    font-size: 26.67vw;
+}
+body{
+    font-family:"微软雅黑",Arial;
+    display: -webkit-flex;
+    flex-direction: column;
+    font-size:.2rem;
+}
+ul,ol{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+img{
+    border:0;
+    display: block;
+}
+.contentBox{
+    flex:1;
+    overflow:scroll;
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/ 
+::-webkit-scrollbar{
+    width:3px;
+    background-color: #999; 
+}
+
+/*定义滚动条轨道 内阴影+圆角*/ 
+::-webkit-scrollbar-track{
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  */
+    background-color: #F5F5F5; 
+}
+   
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb{
+    border-radius: 5px; 
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  */
+    background-color: #999; 
+}

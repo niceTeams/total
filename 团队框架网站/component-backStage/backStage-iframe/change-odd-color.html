@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>vue点击切换改变内容</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /*tr:nth-child(odd){*/
+            /*background: #eee;*/
+        /*}*/
+        table{
+            border:1px solid #eee
+        }
+        tr{
+            height: 30px;
+            width:100px;
+            border-bottom: 1px solid #eee;
+
+        }
+        td{
+            width:200px;
+            padding-left: 10px;
+        }
+        th{
+            text-align: left;
+            border:1px solid #ccc;
+            background: #ccc;
+            padding-left: 10px;
+        }
+        .odd{
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <table  cellspacing="0" cellpadding="0">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Sex</th>
+        </tr>
+        <tr v-for="(person, index) in people"  :class="index%2==0?'even':'odd'">
+            <td>{{person.name}}</td>
+            <td>{{person.age}}</td>
+            <td>{{person.sex}}</td>
+        </tr>
+    </table>
+
+    </div>
+<script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+<script type="text/javascript">
+    new Vue({
+        el:"#app",
+        data: {
+            people: [
+                {
+                    name: 'Jack',
+                    age: '30',
+                    sex: 'Male'
+                },
+                {
+                    name: 'Rose',
+                    age: '27',
+                    sex: 'Female'
+                },
+                {
+                    name: 'Chris',
+                    age: '46',
+                    sex: 'Male'
+                },
+                {
+                    name: 'Faya',
+                    age: '19',
+                    sex: 'Female'
+                }
+            ]
+        },
+        methods:{
+
+        }
+    })
+</script>
+</body>
+</html>
