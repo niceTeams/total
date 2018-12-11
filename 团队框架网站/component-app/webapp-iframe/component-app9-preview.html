@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>component-app7-preview</title>
+<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+<link rel="stylesheet" type="text/css" href="css/component-app7-preview.css" />
+    <style>
+        header{
+            width:100%;
+            background-color: #f82835;
+
+        }
+        .head{
+            /*height:1.125rem;*/
+            height:1.12rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        .head img{
+            width:.265rem;
+            height:.265rem;
+            margin:.2rem .16rem;
+        }
+        .head_bottom{
+            width:100%;
+            height:.6rem;
+            background-color: white;
+            border-top-left-radius:  2.05rem .16rem ;
+            border-top-right-radius: 2.05rem .16rem ;
+            position: relative;
+        }
+        .head_bottom .face{
+            position: absolute;
+            left:calc(50% - 0.35rem);
+            top:-0.35rem;
+        }
+        .face img{
+            width:.69rem;
+            height:.69rem;
+            border-radius: 50%;
+        }
+        .head_bottom .enterLogin{
+            font-size:.15rem;
+            text-align: center;
+            padding-top:.36rem;
+        }
+        nav{
+            width:100%;
+            height:.83rem;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+        .nav_box img{
+            width:.28rem;
+            height:.29rem;
+            margin-left:.14rem;
+            margin-bottom:.12rem;
+        }
+        .nav_box span{
+            display: block;
+            text-align: center;
+            font-size:.14rem;
+            color: #979797;
+        }
+        .banner{
+            width:100%;
+            display: flex;
+            align-items: center;
+        }
+        .banner img{
+            width:3.75rem;
+        }
+        .my-list{
+            width:100%;
+            background: #fff;
+        }
+        .borderBottom{
+            border-bottom:.1rem solid #f6f6f6;
+        }
+        .my-list .my-list-top{
+            width:95%;
+            height:.43rem;
+            display: flex;
+            /*box-sizing: border-box;*/
+            margin-left:5%;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+        }
+        .my-list-top span{
+            display: block;
+            font-size:.14rem;
+            color:#222222;
+        }
+        .my-list-top a{
+            display: flex;
+            margin-right:.15rem;
+        }
+        .my-list-top a span{
+            display: block;
+            font-size:.14rem;
+            color: #979797;
+            margin-right:.1rem;
+        }
+        .my-list-top a img{
+            width:.085rem;
+            height:.14rem;
+        }
+        .my-list .my-list-bottom{
+            width:100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-top:.1rem;
+            padding-bottom:.1rem;
+        }
+        .my-list-box img{
+            width:.29rem;
+            height:.27rem;
+            margin:.05rem auto;
+        }
+        .my-list-box span{
+            display: block;
+            font-size:.14rem;
+            color: #979797;
+        }
+        .banner{
+            width:100%;
+            display: flex;
+            align-items: center;
+        }
+        .banner img{
+            width:3.75rem;
+        }
+        .hrefs{
+            width:100%;
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom:.1rem solid #f6f6f6;
+            padding-bottom:.15rem;
+        }
+        .hrefs .href1{
+            width:25%;
+            text-align: center;
+        }
+        .href1 img{
+            width:.33rem;
+            height:.33rem;
+            margin:.15rem auto .1rem;
+        }
+        .href1 span{
+            font-size:.14rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <img src="images/my_set.gif">
+            <img class="rightImg" src="images/my_message.gif">
+        </div>
+        <div class="head_bottom">
+            <router-link tag="a" to="/enter" class="face" href="#">
+                <img src="images/my-face.jpg"/>
+            </router-link>
+            <p class="enterLogin">登录/注册</p>
+        </div>
+    </header>
+    <nav>
+        <div class="nav_box">
+            <img src="images/my_love.gif" alt="">
+            <span>我的关注</span>
+        </div>
+        <div class="nav_box">
+            <img src="images/my_foot.gif" alt="">
+            <span>浏览足迹</span>
+        </div>
+        <div class="nav_box">
+            <img src="images/my_list.gif" alt="">
+            <span>常规清单</span>
+        </div>
+    </nav>
+    <div class="banner">
+        <img src="images/my_banner1.jpg" alt="">
+    </div>
+    <div>
+        <div class="my-list borderBottom">
+            <div class="my-list-top">
+                <span>我的订单</span>
+                <a href=""><span>查看全部</span><img src="images/my_tip.gif" alt=""></a>
+            </div>
+            <div class="my-list-bottom">
+                <div class="my-list-box">
+                    <img src="images/my-list1.jpg"/>
+                    <span>待付款</span>
+                </div>
+                <div class="my-list-box">
+                    <img src="images/my-list2.jpg"/>
+                    <span>代收货</span>
+                </div>
+                <div class="my-list-box">
+                    <img src="images/my-list3.jpg"/>
+                    <span>待评价</span>
+                </div>
+                <div class="my-list-box">
+                    <img src="images/my-list4.jpg"/>
+                    <span>待换货</span>
+                </div>
+            </div>
+        </div>
+        <div class="my-list">
+            <div class="my-list-top">
+                <span>我的资产</span>
+            </div>
+            <div class="my-list-bottom">
+                <div class="my-list-box">
+                    <img src="images/my-list5.jpg"/>
+                    <span>优惠券</span>
+                </div>
+                <div class="my-list-box">
+                    <img src="images/my-list6.jpg"/>
+                    <span>账户余额</span>
+                </div>
+                <div class="my-list-box">
+                    <img src="images/my-list7.jpg"/>
+                    <span>金币</span>
+                </div>
+                <div class="my-list-box">
+                    <img src="images/my-list8.jpg"/>
+                    <span>礼品卡</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <img src="images/my_banner2.jpg" alt="">
+    </div>
+    <div class="hrefs">
+        <div class="href1">
+            <img src="images/my-hrefs1.jpg"/>
+            <span>充值中心</span>
+        </div>
+        <div class="href1">
+            <img src="images/my-hrefs2.jpg"/>
+            <span>会员中心</span>
+        </div>
+        <div class="href1">
+            <img src="images/my-hrefs1.jpg"/>
+            <span>天天签到</span>
+        </div>
+        <div class="href1">
+            <img src="images/my-hrefs3.jpg"/>
+            <span>客户服务</span>
+        </div>
+        <div class="href1">
+            <img src="images/my-hrefs4.jpg"/>
+            <span>我的预约</span>
+        </div>
+        <div class="href1">
+            <img src="images/my-hrefs5.jpg"/>
+            <span>联名卡</span>
+        </div>
+        <div class="href1">
+            <img src="images/my-hrefs6.jpg"/>
+            <span>三单有礼</span>
+        </div>
+        <div class="href1">
+            <img src="images/my-hrefs7.jpg"/>
+            <span>发票中心</span>
+        </div>
+    </div>
+</body>
+</html>

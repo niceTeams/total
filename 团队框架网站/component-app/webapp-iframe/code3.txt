@@ -1,0 +1,21 @@
+export default {
+        name: "Sorts",
+      data(){
+        return{
+          products: []
+        }
+      },
+      methods:{
+        _initPageData(){
+          CartApis.getShopData(data=>{
+            this.products = data
+            console.log(this.products)
+          })
+        }
+      },
+      created(){
+        //首页加载数据
+        this._initPageData()
+      },
+
+    }

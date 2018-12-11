@@ -1,0 +1,526 @@
+*{ box-sizing:border-box;}
+.all{ height:100%; display:flex;flex-direction:column;}
+/*=============================header=========================*/
+header{
+    height:.45rem;
+    background:#fff;
+}
+header .up1{
+    height: .45rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:5px 20px;
+}
+header .up1>span{
+    width: .32rem;
+    height: .32rem;
+    background: url("../images/detail-1.png") no-repeat;
+    background-size: .32rem auto;
+}
+header .up1>span.ersp{
+    background: url("../images/detail-2.png") no-repeat;
+    background-size: .32rem auto;
+}
+
+/*=============================main=========================*/
+main{flex:1; background:#f5f5f5; overflow:auto;}
+
+/*==================nav==================================*/
+main nav{
+    height:2.6rem;
+    background: #fff;
+}
+main nav .swiper-container{
+    width: 100%;
+    height: 100%;
+}
+main nav img{
+    width: 100%;
+    height: 100%;
+}
+/*==================menu==================================*/
+main  .menu{
+    padding:0 15px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    background: #fff;
+}
+main  .menu  h2{
+    font-size: 22.3px;
+    color: #fe386b;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+main  .menu  p{
+    font-size: 16.3px;
+    line-height: 1.5;
+    color: black;
+    margin-top: 5px;
+}
+main  .menu  p:last-child{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:#888
+}
+main  .menu  p:last-child span{
+    color: #f72f0e;
+    font-size: 22px;
+}
+main  .menu  p:last-child span i{
+    font-size: 16px;
+}
+main  .menu  p:last-child a{
+    padding: 2px 12px;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+/*====================mayi=====================*/
+main .mayi{
+    overflow: hidden;
+    background: #fff;
+    padding: 0 6px;
+ }
+main .mayi>div{
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    /*border-bottom: 1px solid #ddd;*/
+    border-top: 1px solid #ddd;
+}
+main .mayi>div>div{
+    flex: 1;
+    height: .45rem;
+    display: flex;
+    align-items: center;
+}
+main .mayi>div>div span{
+    font-size: 13px;
+    margin-left: 15px;
+}
+main .mayi>div>div span:nth-child(1){
+    color: #383838;
+    font-size: 15px;
+    font-weight: bold;
+}
+main .mayi>div>div span.man{
+    padding: 0 4px;
+    border-radius: 2px;
+    color: #fff;
+    border: 1px solid #fe386b;
+    background: #fe386b;
+}
+main .mayi>div>span{
+    display: inline-block;
+    width: .24rem;
+    height: .24rem;
+    background: url("../images/detail-dian.png") no-repeat center;
+    background-size: .28rem auto;
+
+}
+main .mayi>div>div span.zhi{
+    background: url("../images/detail-dui.png") no-repeat;
+    background-size: .2rem;
+    padding-left: 24px;
+}
+
+
+main .mayi>div:nth-child(2){
+    border-bottom: 0;
+}
+main .mayi>div:nth-child(2)>div{
+    height: .3rem;
+}
+main .mayi>p{
+    width: 78%;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 13px;
+    color: #666;
+    padding-left: 18px;
+    margin-bottom: 10px;
+}
+/*==============================dian==============*/
+main .dian{
+    overflow: hidden;
+    margin-top: 10px;
+    background: #fff;
+    padding: 10px 16px;
+    padding-bottom: 20px;
+}
+main .dian h2{
+    font-size: 18px;
+    line-height: 2.4;
+
+}
+main .dian p{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+main .dian p span {
+    margin-right: 7px;
+    margin-left: 5px;
+    color: #666;
+    padding-right: 20px;
+    background: url("../images/detail-jian.png") no-repeat 85px ;
+    background-size: .11rem auto;
+}
+main .dian p span i{
+    color: #e64d47;
+}
+main .dian p a{
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 8px 53px;
+    border-radius: 2px;
+    color: black;
+}
+main .dian p a:nth-child(1){
+    margin-right: 15px;
+    background:url("../images/detail-dian1.png") no-repeat 24px center;
+    background-size:.22rem auto;
+    background-color: #f8f8f8;
+}
+main .dian p a:nth-child(2){
+    background:url("../images/detail-dian2.png") no-repeat 24px center;
+    background-size:.22rem auto;
+    background-color: #f8f8f8;
+}
+/*==========================talks================*/
+main .talks{
+    overflow: hidden;
+    background: #fff;
+    margin-top: 10px;
+    padding: 0 15px;
+}
+main .talks p:nth-child(1){
+    line-height: 3;
+    display: flex;
+    justify-content: space-between;
+}
+main .talks p:nth-child(1) span{
+    font-size: 18px;
+    font-weight: bold;
+}
+main .talks p:nth-child(1) span i{
+    font-size: 14px;
+    color: black;
+    font-weight: normal;
+}
+main .talks p:nth-child(1) label{
+    font-size: 16px;
+    color: black;
+}
+main .talks p:nth-child(1) label i{
+    font-size: 15px;
+    color: #fb1c14;
+    font-weight: normal;
+}
+
+main .talks p:nth-child(2){
+    font-size: 14px;
+}
+main .talks>div{
+    display: flex;
+}
+main .talks>div img{
+    height: 1rem;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 1rem;
+    border: 1px solid #f7f7f7;
+}
+main .talks a{
+    margin:15px 100px;
+    padding: 6px 20px;
+    border: 1px solid #eb1105;
+    color: #eb1105;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+
+/*========================goods========================*/
+main .goods{
+    overflow: hidden;
+    background: #fff;
+    margin-top: 10px;
+}
+main .goods>h2{
+    display: flex;
+    height: .38rem;
+    line-height: .38rem;
+    border-bottom: 1px solid #eee;
+}
+main .goods>h2 a{
+    margin-left: 75px;
+    font-size: 16px;
+}
+main .goods>h2 a.shus{
+    color:#eb1105;
+    border-bottom: 1px solid #eb1105;
+}
+main .goods>div{
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+main .goods>div dl{
+    width: 33%;
+}
+main .goods>div dl dt{
+    height: 1.1rem;
+    width: 100%;
+}
+main .goods>div dl dt img{
+    height: 100%;
+    width: 100%;
+
+}
+main .goods>div dl dd div h4{
+    font-size: 15px;
+    line-height: 1.8;
+    color: black;
+    font-weight: normal;
+}
+main .goods>div dl dd div p.ma1{
+    font-size: 14px;
+    color:#777 ;
+}
+main .goods>div dl dd div span.bao1{
+    font-size: 13px;
+    display: inline-block;
+    margin-top: 8px;
+    padding: 1px 6px;
+    color:#dd6080 ;
+    border: 1px solid #dd6080;
+}
+main .goods>div dl dd div.erdiv p:nth-child(1){
+    display: flex;
+    padding-right: 8px;
+    align-items: center;
+    justify-content: space-between;
+}
+main .goods>div dl dd div.erdiv p:nth-child(1) label{
+    color:#ff3814;
+    font-size: 18px;
+}
+main .goods>div dl dd div.erdiv p:nth-child(1) label i{
+    color: #888;
+    margin-left: 6px;
+    font-size: 13.5px;
+    font-weight: normal;
+    text-decoration: line-through;
+}
+main .goods>div dl dd div.erdiv p:nth-child(1) span{
+    color: #888;
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+
+
+
+
+
+/*====================mayi=====================*/
+main .mayis{
+    overflow: hidden;
+    background: #fff;
+    text-align: center;
+    height: .4rem;
+    line-height: .4rem;
+}
+main .mayis>a{
+    margin: 0 auto;
+    font-size: 13px;
+    padding-left: 20px;
+    background: url("../images/detail-hui.png") no-repeat 0px 2px;
+    background-size: .15rem auto;
+}
+
+/*=============================footer=========================*/
+footer{
+    height: .52rem;
+    display: flex;
+    padding-left: 15px;
+    background: #fff;
+    align-items: center;
+    border-top: 1px solid #eee;
+}
+footer>div{
+    flex: 1;
+    height: 100%;
+    display: flex;
+
+}
+footer>div p{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 10px;
+    align-items: center;
+}
+footer>div p span{
+    width: .34rem;
+    height: .3rem;
+    display: inline-block;
+    margin-top: 3px;
+}
+footer>div p:nth-child(1) span{
+    background:url("../images/detail-f1.png") no-repeat;
+    background-size: .34rem auto;
+}
+footer>div p:nth-child(2) span{
+    background:url("../images/detail-f2.png") no-repeat;
+    background-size: .32rem auto;
+}
+
+footer>div p:nth-child(2){
+    margin-right: 15px;
+
+}
+footer>div p label{
+    color: #333;
+    font-size: 14px;
+}
+
+footer>a{
+    display: inline-block;
+    padding:0 22px;
+    background: #ff3c26;
+    line-height: .5rem;
+    font-size:18.5px;
+    color: #fff;
+    text-align: center;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

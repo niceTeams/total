@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>component-app1-preview</title>
+    <link rel="stylesheet" type="text/css" href="css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+    <link rel="stylesheet" type="text/css" href="css/component-app1-preview.css" />
+    <style>
+        .cat-left{
+            position: fixed;
+            height: 100%;
+            background-color: #f4f4f4;
+            overflow: auto;
+        }
+        .cat-nav{
+            height: 100%;
+        }
+        .cat-nav .cat-li{
+            width: .7rem;
+            height: .4rem;
+            border-bottom: 1px solid #e3e3e3;
+            text-align: center;
+            line-height: .4rem;
+        }
+        .cat-li span{
+            display: block;
+            color:  #666;
+            font-size:.12rem;
+        }
+        .pool_wrap{
+            width: 76%;
+            position: fixed;
+            right: 0;
+            height: 100%;
+            overflow: auto;
+        }
+        .product{
+            display: flex;
+            background: #fff;
+            padding: .08rem 0;
+            height: .6rem;
+            border-bottom: 1px solid #f4f4f4;
+        }
+        /*.product .pic{*/
+            /*width:.6rem;*/
+            /*height:.6rem;*/
+            /*margin-left:.1rem;*/
+        /*}*/
+        .pic img{
+            width:.6rem;
+            height:.6rem;
+            border: 1px solid #eee;
+        }
+        .product .info{
+            box-sizing: border-box;
+            height: .9rem;
+            /*margin-left: 40px;*/
+        }
+        .inner-info{
+            margin-left: 18px;
+        }
+        .inner-info .name{
+            color: #333;
+            font-size:.12rem;
+            max-height: .34rem;
+            line-height: .18rem;
+            overflow: hidden;
+        }
+        .inner-info .atc_tag{
+            margin-top: .05rem;
+            height:.15rem;
+        }
+        .atc_tag .sku_tag{
+            background-color: #fff;
+            float: left;
+            margin-top: 5px;
+            margin-right: .05rem;
+            color: #eb1105;
+            border: 1px solid #eb1105;
+            border-radius: 2px;
+            padding: 0px 3px;
+            font-size: .11rem;
+            text-align: center;
+        }
+        .inner-info .message{
+            height: .24rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: .06rem;
+        }
+        .message .price{
+            float: left;
+            color: #ff2b15;
+            font-size: .12rem;
+        }
+        .message .comment{
+            float: right;
+            margin-left: 30px;
+            width: .2rem;
+            height: .2rem;
+            background: url("images/list-car.png") no-repeat;
+            background-size: .18rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cat-left">
+        <div class="cat-nav">
+            <div class="cat-li"><span>为您推荐</span></div>
+            <div class="cat-li"><span>美容护理</span></div>
+            <div class="cat-li"><span>手机数码</span></div>
+            <div class="cat-li"><span>家用电器</span></div>
+            <div class="cat-li"><span>家居家纺</span></div>
+            <div class="cat-li"><span>电脑办公</span></div>
+            <div class="cat-li"><span>运动户外</span></div>
+            <div class="cat-li"><span>服装内衣</span></div>
+            <div class="cat-li"><span>宠物用品</span></div>
+            <div class="cat-li"><span>图书杂志</span></div>
+            <div class="cat-li"><span>营养保健</span></div>
+        </div>
+    </div>
+    <div class="pool_wrap" >
+        <a href="" v-for="m in list2">
+            <div  class="product">
+                <div class="pic">
+                    <img :src="m.pic">
+                </div>
+                <div class="info">
+                    <div class="inner-info">
+                        <div class="name">标题（阿里达斯休闲板鞋）</div>
+                        <div class="atc_tag">
+                            <div class="sku_tag">满减</div>
+                        </div>
+                        <div class="message">
+                            <div class="price"> 价格（¥65.0）</div>
+                            <div class="comment"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  class="product">
+                <div class="pic">
+                    <img :src="m.pic">
+                </div>
+                <div class="info">
+                    <div class="inner-info">
+                        <div class="name">GIORGIO乔治阿玛尼持色...</div>
+                        <div class="atc_tag">
+                            <div class="sku_tag">满减</div>
+                        </div>
+                        <div class="message">
+                            <div class="price">¥ 34.0</div>
+                            <div class="comment"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  class="product">
+                <div class="pic">
+                    <img :src="m.pic">
+                </div>
+                <div class="info">
+                    <div class="inner-info">
+                        <div class="name">GIORGIO乔治阿玛尼持色...</div>
+                        <div class="atc_tag">
+                            <div class="sku_tag">满减</div>
+                        </div>
+                        <div class="message">
+                            <div class="price">¥ 34.0</div>
+                            <div class="comment"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  class="product">
+                <div class="pic">
+                    <img :src="m.pic">
+                </div>
+                <div class="info">
+                    <div class="inner-info">
+                        <div class="name">GIORGIO乔治阿玛尼持色...</div>
+                        <div class="atc_tag">
+                            <div class="sku_tag">满减</div>
+                        </div>
+                        <div class="message">
+                            <div class="price">¥ 34.0</div>
+                            <div class="comment"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  class="product">
+                <div class="pic">
+                    <img :src="m.pic">
+                </div>
+                <div class="info">
+                    <div class="inner-info">
+                        <div class="name">GIORGIO乔治阿玛尼持色...</div>
+                        <div class="atc_tag">
+                            <div class="sku_tag">满减</div>
+                        </div>
+                        <div class="message">
+                            <div class="price">¥ 34.0</div>
+                            <div class="comment"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  class="product">
+                <div class="pic">
+                    <img :src="m.pic">
+                </div>
+                <div class="info">
+                    <div class="inner-info">
+                        <div class="name">GIORGIO乔治阿玛尼持色...</div>
+                        <div class="atc_tag">
+                            <div class="sku_tag">满减</div>
+                        </div>
+                        <div class="message">
+                            <div class="price">¥ 34.0</div>
+                            <div class="comment"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  class="product">
+                <div class="pic">
+                    <img :src="m.pic">
+                </div>
+                <div class="info">
+                    <div class="inner-info">
+                        <div class="name">GIORGIO乔治阿玛尼持色...</div>
+                        <div class="atc_tag">
+                            <div class="sku_tag">满减</div>
+                        </div>
+                        <div class="message">
+                            <div class="price">¥ 34.0</div>
+                            <div class="comment"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  class="product">
+                <div class="pic">
+                    <img :src="m.pic">
+                </div>
+                <div class="info">
+                    <div class="inner-info">
+                        <div class="name">GIORGIO乔治阿玛尼持色...</div>
+                        <div class="atc_tag">
+                            <div class="sku_tag">满减</div>
+                        </div>
+                        <div class="message">
+                            <div class="price">¥ 34.0</div>
+                            <div class="comment"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  class="product">
+                <div class="pic">
+                    <img :src="m.pic">
+                </div>
+                <div class="info">
+                    <div class="inner-info">
+                        <div class="name">GIORGIO乔治阿玛尼持色...</div>
+                        <div class="atc_tag">
+                            <div class="sku_tag">满减</div>
+                        </div>
+                        <div class="message">
+                            <div class="price">¥ 34.0</div>
+                            <div class="comment"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <link rel="stylesheet" href="assets/css/style11.css">
+    <link rel="stylesheet" href="assets/css/index11.css">
+    <link rel="stylesheet" href="assets/css/charts.css">
+    <script src="assets/js/echarts.min.js"></script>
+    <style>
+    @media screen and (min-width:740px) and (max-width:970px){
+        .row .col{float: none;width:100%; margin-bottom:36px}
+        .centers1,.centers2,.centers3,.centers4{width:100%;float: none;margin-bottom: 20px;}
+    }
+    @media screen and (max-width:740px){
+        header{height: 120px;}
+        header section.l,section.r{float: none;}
+        .menu{display: block;}
+        .nav{margin-left: -260px}
+        .contentBox{margin-left: 0px}
+        .row .col{float: none;width:100%; margin-bottom:36px}
+        .topChart {margin-top: 0}
+        .centers1,.centers2,.centers3,.centers4{width:100%;float: none;margin-bottom: 20px}
+        .centers2>div{margin-top:20px}
+    }
+    </style>
+</head>
+<body>
+    <div id="bigBox">
+        <header>
+            <section class="l">
+                <a href="index.html" class="l">
+                    <i class="iconfont">&#xe714;</i>
+                    <strong>HYBRID</strong>
+                </a>
+                <div class="menu r" >
+                    <i class="iconfont">&#xe611;</i>
+                </div>
+            </section>
+            <section class="r">
+                <ul>
+                    <li class="l">
+                        <i class="iconfont">&#xe60b;</i>
+                        <i class="iconfont">&#xe606;</i>
+                    </li>
+                    <li class="l">
+                        <i class="iconfont">&#xe611;</i>
+                        <i class="iconfont">&#xe606;</i>
+                    </li>
+                    <li class="l">
+                        <i class="iconfont">&#xe601;</i>
+                        <i class="iconfont">&#xe606;</i>
+                    </li>
+                    <li class="l">
+                        <i class="iconfont">&#xe60c;</i>
+                        <i class="iconfont">&#xe606;</i>
+                    </li>
+                </ul>
+            
+            
+            </section>
+            
+        </header>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html" >
+                        <i class="iconfont">&#xe6a4;</i>
+                        Dashboard
+                </a></li>
+                <li><a href="elements.html">
+                        <i class="iconfont">&#xe505;</i>
+                        UI Elements
+                </a></li>
+                <li><a href="charts.html"  class="cur">
+                        <i class="iconfont">&#xe698;</i>
+                        Charts
+                </a></li>
+                <li><a href="tabs.html">
+                        <i class="iconfont">&#xe640;</i>
+                        Tabs & Panels
+                </a></li>
+                <li><a href="tables.html">
+                        <i class="iconfont">&#xe64e;</i>
+                        Tables
+                </a></li>
+                <li><a href="forms.html">
+                        <i class="iconfont">&#xe9ca;</i>
+                        Forms
+                </a></li>
+                <li><a href="">
+                        <i class="iconfont">&#xe501;</i>
+                        Mulit
+                </a></li>
+                <li><a href="">
+                        <i class="iconfont">&#xe638;</i>
+                        Empty Page
+                </a></li>
+            </ul>
+            <div class="toggle">
+               <i class="iconfont">&#xe502;</i>
+            </div>
+        </div>
+        <div class="contentBox">
+            <div class="content">
+                <div class="title">
+                    <p><span>Charts</span>  Show up your statsp</p>
+                </div>
+
+                <div class="topChart row">
+                <!--  面积图 -->
+                    <div class="centers1 rel l">
+                        <div id="area" class="area l"></div> 
+                    </div>
+                <!--  面积图JS -->
+                <script>
+                     var myChart = echarts.init(document.getElementById('area'));
+                     option = {
+                        backgroundColor:"#fff",
+                        title: {
+                            text: 'Area Chart',
+                            textStyle:{
+                                fontWeight:100
+                            },
+                            padding:20
+                        },
+                        tooltip: {
+                          
+                        // 悬浮提示
+                            trigger: "axis",
+                                backgroundColor: "#fff",
+                                textStyle: {
+                                    color: "#24c2ce"
+                                },
+                                // "text-align":center,
+                                backgroundColor : 'rgba(255,255,255,0.7)',
+                                borderColor : '#ccc',
+                                borderWidth: 2,
+                                borderRadius: 3 //边框圆角
+                        },
+                        grid:{
+                            x:60,
+                            y:70,
+                            x2:40,
+                            y2:50,
+                            borderWidth:1
+                        },
+                        xAxis : [
+                            {
+                                type : 'category',
+                                boundaryGap :false,
+                                data : ['2010Q1','2010Q2','2010Q3','2010Q4','2011Q1','2011Q2','2011Q3','2011Q4','2012Q1','2012Q2'],
+                                axisTick: {
+                                    show: false
+                                },
+                                axisLine:{
+                                    lineStyle:{  
+                                        width:0,
+                                        color:"#999"
+                                    },
+                                },
+                                axisLabel: {
+                                    show: true,
+                                    textStyle: {
+                                        color: '#999',
+                                    },
+                                    interval:4
+                                },
+                                
+                            }
+                        ],
+                        yAxis : [
+                            {
+                                type : 'value',
+                                min:0,
+                                max:30000,
+                                axisTick: {
+                                    show: false
+                                },
+                                axisLine:{
+                                    lineStyle:{  
+                                        width:0
+                                    } 
+                                },
+                                axisLabel: {
+                                    show: true,
+                                    textStyle: {
+                                        color: '#999'
+                                    }
+                                },
+                                
+                            }
+                        ],
+                        series : [
+                            {
+                                name:'iPhone',
+                                type:'line',
+                                smooth:.3,
+                                stack:"总量",
+                                symbolSize:5,
+                                //区域填充样式
+                                areaStyle: {
+                                    normal: {
+                                        color:"#cfcfcf"
+                                    },
+                                },
+                                //线条样式
+                                lineStyle: {
+                                    normal: {
+                                        width: 3,
+                                        color:'#a6a6a6'
+                                    }
+                                },
+                                //折线拐点标志的样式
+                                itemStyle:{
+                                    normal:{
+                                        color:"#000",
+                                        //拐点处的文字样式
+                                        label: {
+                                            textStyle: {
+                                                
+                                            }
+                                        },
+                                    }
+                             },
+                                data:[2666,2778 ,4912 ,3767,6810,5670 ,4820 ,15073, 10687, 8432]
+                            },
+                            {
+                                name:'ipad',
+                                type:'line',
+                                smooth:.3,
+                                stack:"总量",
+                                symbolSize:5,
+                                areaStyle: {
+                                    normal: {
+                                        color:"#24c2ce"
+                                    },
+                                },
+                                lineStyle: {
+                                    normal: {
+                                        width: 3,
+                                        color:'#a6a6a6'
+                                    }
+                                },
+                                itemStyle:{
+                                    normal:{
+                                        // label: {
+                                        //     show: true,
+                                        //     textStyle: {
+                                        //         color: '#fff'
+                                        //     }
+                                        // },
+                                        color:'#000'
+                                    }
+                                 },
+                                data:[0, 2294, 1969, 3597, 1914, 4293, 3795, 5967, 4460, 5713]
+                            },
+                            {
+                                name:'ipod Touch',
+                                type:'line',
+                                smooth:.3,
+                                stack:"总量",
+                                symbolSize:5,
+                                 areaStyle: {
+                                    normal: {
+                                        color:"#cfcfcf"
+                                    },
+                                },
+                                lineStyle: {
+                                    normal: {
+                                        width: 3,
+                                        color:'#a6a6a6'
+                                    }
+                                },
+                                itemStyle:{
+                                    normal:{
+                                        // label: {
+                                        //     show: true,
+                                        //     textStyle: {
+                                        //         color: '#fff'
+                                        //     }
+                                        // },
+                                        color:'#000'
+                                    }
+                                 },
+                                data:[2647,2441, 2501, 5689, 2293, 1881, 1588, 5175, 2028, 1791]
+                            }
+                        ]
+                    };
+                         
+                     // 使用刚指定的配置项和数据显示图表。
+                     myChart.setOption(option);
+                </script>
+                <!-- 折线图 -->
+                    <div class="centers2 rel l">
+                        <div id="line" class="line l"></div> 
+                    </div>
+                <!-- 折线图JS -->
+                    <script type="text/javascript">
+                       // 基于准备好的dom，初始化echarts实例
+                       var myChart = echarts.init(document.getElementById('line'));
+                            // 指定图表的配置项和数据      
+                            option = {
+                                backgroundColor:"#fff",
+                                title: {
+                                    text: 'Line Chart',
+                                    textStyle:{
+                                        fontWeight:100
+                                    },
+                                    padding:20
+                                },
+                                tooltip: {
+                                  
+                                // 悬浮提示
+                                    trigger: "axis",
+                                        backgroundColor: "#fff",
+                                        textStyle: {
+                                            color: "#24c2ce"
+                                        },
+                                        // "text-align":center,
+                                        backgroundColor : 'rgba(255,255,255,0.7)',
+                                        borderColor : '#ccc',
+                                        borderWidth: 2,
+                                        borderRadius: 3 //边框圆角
+                                },
+                                grid: {
+                                    left: '3%',
+                                    right: '4%',
+                                    y:70,
+                                    y2:20,
+                                    containLabel: true
+                                },
+                                // toolbox: {
+                                //     feature: {
+                                //         saveAsImage: {}
+                                //     }
+                                // },
+                                xAxis: {
+                                    type: 'category',
+                                    //是否在0的位置
+                                    boundaryGap: false,
+                                    //
+                                    axisTick: {
+                                        show: false
+                                    },
+                                    
+                                    axisLine:{
+                                        lineStyle:{  
+                                            color:'#ccc'
+                                        } 
+                                    },
+                                    data: ['2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024'],
+                                    axisLabel: {
+                                        show: true,
+                                        textStyle: {
+                                            color: '#999',
+                                            width:2
+                                        },
+                                        interval:1
+                                    }
+                                },
+                                yAxis: {
+                                    type: 'value',
+                                    min:0,
+                                    max:200,
+                                    axisTick: {
+                                        show: false
+                                    },
+                                    axisLine:{
+                                        lineStyle:{  
+                                            color:'#fff',
+                                            width:10
+                                        } 
+                                    },
+                                    axisLabel: {
+                                        show: true,
+                                        textStyle: {
+                                            color: '#999'
+                                        }
+                                    }
+                                },
+                                series: [
+                                    {
+                                        name:'Total Income',
+                                        type:'line',
+                                        smooth:.3,
+                                        symbolSize :8,
+                                        itemStyle : {  
+                                            normal : { 
+                                                color: "#000", 
+                                                lineStyle:{  
+                                                    color:'#808080'
+                                                }  
+                                            }  
+                                        },
+                                        lineStyle:{
+                                            normal:{
+                                                width:3
+                                            }
+                                        },
+                                        data:[50,165, 150, 175, 80, 90, 100, 155, 80, 145, 160]
+                                    },
+                                    {
+                                        name:'Total Outcome',
+                                        type:'line',
+                                        smooth:.3,
+                                        symbolSize :8,
+                                        itemStyle : {  
+                                            normal : { 
+                                                color: "#000",  
+                                                lineStyle:{  
+                                                    color:'#24c2ce'    
+                                                }  
+                                            }  
+                                        }, 
+                                        lineStyle:{
+                                            normal:{
+                                                width:3
+                                            }
+                                        },
+                                        data:[90, 185, 130, 160, 65, 70, 125, 175, 85, 155, 195]
+                                    }
+                                ]
+                            };
+                        // 使用刚指定的配置项和数据显示图表。
+                            myChart.setOption(option);
+                    </script>
+                </div>
+                <div class="row">
+                    <div class="centers3 rel l">
+                        <div id="barChart" class="barChart l"></div>
+                    </div>
+                    <script>
+                        
+                        var myChart = echarts.init(document.getElementById('barChart'));
+                        option = {
+                            backgroundColor:"#fff",
+                            title: {
+                                text: 'Bar Chart Example',
+                                textStyle:{
+                                    fontWeight:100,
+                                },
+                                padding:20
+                            },
+                            tooltip : {
+                                trigger: 'axis',
+                                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                                }
+                            },
+                            grid: {
+                                x:30,
+                                y:70,
+                                x2:40,
+                                y2:40,
+                                containLabel: true
+                            },
+                            xAxis : [
+                                {
+                                    type : 'category',
+                                    axisTick: {
+                                        show: false
+                                    },
+                                    axisLine:{
+                                        lineStyle:{  
+                                            width:0
+                                        } 
+                                    },
+                                    axisLabel: {
+                                        show: true,
+                                        textStyle: {
+                                            color: '#999'
+                                        }
+                                    },
+                                    data : ['2006','2007','2008','2009','2010','2011','2012']
+                                }
+                            ],
+                            yAxis : [
+                                {
+                                    type : 'value',
+                                    min:0,
+                                    max:100,
+                                    axisTick: {
+                                        show: false
+                                    },
+                                    axisLine:{
+                                        lineStyle:{  
+                                            width:0
+                                        } 
+                                    },
+                                    axisLabel: {
+                                        show: true,
+                                        textStyle: {
+                                            color: '#999'
+                                        }
+                                    }
+                                }
+                                
+                            ],
+                            series : [
+                            {
+                                name:'Series A',
+                                type:'bar',
+                                // barWidth:38,
+                                itemStyle:{
+                                    normal:{
+                                        color:'#a6a6a6'
+                                    }
+                                },
+                                data:[100, 75, 50, 75, 50, 75, 100],
+                                // barCateGoryGap:100,
+                                barGap:"12%",
+                                barWidth:32
+                            },
+                            {
+                                name:'Series B',
+                                type:'bar',
+                                // barWidth:38,
+                                 itemStyle:{
+                                    normal:{
+                                        color:'#24c2ce'
+                                    }
+                                },
+                    
+                                data:[90, 65, 40, 65, 40, 65, 90],
+                               
+                                barGap:"12%",
+                                barWidth:32
+                            }
+                        ]
+                        };
+                        myChart.setOption(option);
+                        window.onresize = myChart.resize;
+                    </script>
+                    <div class="centers4 rel l">
+                        <div id="donutChart" class="donutChart l"></div>
+                    </div>
+                    <script>
+                        var myChart = echarts.init(document.getElementById('donutChart'));
+                        option = {
+                            backgroundColor:"#fff",
+                            title: {
+                                text: 'Donut Chart Example',
+                                textStyle:{
+                                    fontWeight:100,
+                                
+                                },
+                                padding:20
+                            },
+                            series: [
+                                {
+                                    name:'访问来源',
+                                    type:'pie',
+                                    radius: ['50%', '70%'],
+                                    avoidLabelOverlap: false,
+                                    label: {
+                                        normal: {
+                                            show: false,
+                                            position: 'center'
+                                        },
+                                        emphasis: {
+                                            show: true,
+                                            textStyle: {
+                                                fontSize: '12',
+                                                fontWeight: 'bold',
+                                                color:"#000"
+                                            }
+                                        }
+                                    },
+                                    labelLine: {
+                                        normal: {
+                                            show: false
+                                        }
+                                    },
+                                    data:[
+                                        {value:20, name:'Mail-Order Sales'},
+                                        {value:30, name:'In-Store Sales'},
+                                        {value:12, name:'Download Sales'},
+                                    ],
+                                    color: ["#a6a6a6","#24c2ce","#a8e9dc"]
+                                }
+                            ]
+                        };
+
+                        myChart.setOption(option);
+                        window.onresize = myChart.resize;
+                    </script>
+                </div>
+                <footer>
+                    <p>Copyright © 2016.Company name All rights reserved.</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="assets/js/jquery-1.8.3.min.js"></script>
+<script src="assets/js/indexgr11.js"></script>
+<script>
+</script>

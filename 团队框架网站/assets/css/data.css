@@ -1,0 +1,137 @@
+.content-page{
+    background-color: #232323;
+    width:100%;
+    height:100%;
+}
+.top-page{
+    height:69px;
+    background-color:#232323;
+    display: flex;
+}
+.title{
+    line-height: 69px;
+}
+.title h2{
+    font-size:24px;
+    color:#ffb90a;
+    font-weight:400;
+    margin-right:98px;
+}
+.filed{
+    display: flex;
+
+}
+.filed a{
+    display: block;
+    margin-left:11px;
+    margin-top:11px;
+}
+.filed a .iconfont{
+    font-size:26px;
+    color:#fff;
+    text-align: center;
+}
+.filed a span{
+    font-size: 12px;
+    color:#fff;
+}
+.page-box{
+    display: flex;
+
+}
+.left-page{
+    width:65px;
+    background-color: #393a3f;
+}
+.left-page a{
+    display: block;
+    margin-bottom:17px;
+}
+.left-page a img{
+    width:44px;
+    height:44px;
+    padding-left:10px;
+}
+.left-page a span{
+    display: block;
+    text-align: center;
+    font-size:12px;
+    color:#fff;
+}
+.right-box{
+    width:100%;
+    overflow: hidden;
+    display: flex;
+}
+.right-page{
+    width:70%;
+    padding-left:10px;
+}
+.right-page .select{
+    display: flex;
+    font-size:14px;
+    color:#fff;
+    /*text-align: center;*/
+    height:44px;
+    /*padding-left:18px;*/
+}
+.select span{
+    display: block;
+    font-size:14px;
+    color:#fff;
+}
+ .select .search{
+     height:20px;
+ }
+
+ .right-page .hours{
+    height:197px;
+    background-color: #393a4c;
+     margin-bottom: 10px;
+}
+.hours #electric{
+    width:100%;
+    height:100%;
+}
+.right-page .day{
+    height:197px;
+    background-color: #393a4c;
+    margin-bottom: 10px;
+}
+.day #days{
+    width:100%;
+    height:100%;
+}
+.right-page .mouth{
+    height:197px;
+    background-color: #393a4c;
+    margin-bottom: 10px;
+}
+.mouth #mouths{
+    width:100%;
+    height:100%;
+}
+.end-page{
+    width:30%;
+}
+.circle{
+    width:100%
+}
+.circle  #circles{
+    width:100%;
+    height:262px;
+}
+.lenged{
+    width:100%
+}
+.lenged  #cen{
+    width:100%;
+    height:262px;
+}
+.last{
+    width:100%
+}
+.last  #area{
+    width:100%;
+    height:262px;
+}

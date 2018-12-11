@@ -1,0 +1,30 @@
+<template>
+    <table  cellspacing="0" cellpadding="0">
+        <tr v-for="(person, index) in people"  :class="index%2==0?'even':'odd'">
+            <td>{{person.name}}</td>
+            <td>{{person.age}}</td>
+            <td>{{person.sex}}</td>
+            <td><button @click="del(index)">Delete</button></td>
+        </tr>
+    </table>
+</template>
+<script>
+export default {
+  	name: 'Delete',
+    data(){
+        return{
+            people: [
+                {name: 'Jack',age: '30',sex: 'Male'},
+                {name: 'Rose',age: '27',sex: 'Female'},
+                {name: 'Kris',age: '46',sex: 'Male'},
+                {name: 'Angela',age: '19',sex: 'Female'}
+            ]
+        }
+    },
+    methods: {
+        del: function(index){
+            this.people.splice(index, 1);
+        }
+    }
+});
+</script>

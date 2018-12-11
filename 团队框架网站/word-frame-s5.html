@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>框架</title>
+    <link rel="stylesheet" href="assets/css/base.css"/>
+    <link rel="stylesheet" href="assets/css/word-frame.css"/>
+</head>
+<body>
+<header>
+    <div class="w">
+        <h1 class="l">
+            <a>Nice UI 文档</a>
+        </h1>
+        <ul class="r">
+            <li class="l "><a href="word-app.html">入门</a></li>
+            <li class="l appbottom"><a href="word-frame.html">框架</a></li>
+            <li class="l"><a href="component-app/component-app1.html">组件</a></li>
+        </ul>
+    </div>
+
+</header>
+<main>
+    <div class="w">
+        <div class="l">
+            <ul>
+                <li>
+                    <a href="#">基础知识</a>
+                    <ul>
+                        <li class="teshu"><a href="word-frame.html">框架概述</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">框架基础功能</a>
+                    <ul>
+                        <!-- <li><a href="word-frame-s3.html">主框架页方法</a></li> -->
+                        <li><a href="word-frame-s4.html">常用正则表达式</a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">资源索引</a>
+                    <ul>
+                        <li class="teshu"><a href="word-css.html">CSS库索引</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="r">
+            <h4>基本图标库</h4>
+            <hr>
+            <h5>图标库用途</h5>
+            <p>​框架提供了160个常用小图标作为基本图标库。图标库索引和效果见组件示例的“资源>>图标库”栏目。</p>
+            <p>图标库用途非常广泛，举例如下： 1、创建单独的图标 使用span标签然后设置class就可生成图标。生成不带文字的单独图标，使用img_xxx。例如：</p>
+            <p class="code">
+                &lt;span class="img_edit"&gt&lt;/span&gt;
+            </p>
+            <p>
+                则创建了一个如下的图标
+            </p>
+            <p>
+                <img src="assets/images/guide_26.png">
+            </p>
+
+            <p>
+                注意，图标默认设置了float为true的样式，所以要在代码后加
+            </p>
+            <p class="code">
+                &lt;br/&gt;（本框架中的<br/>具有清除浮动功能）
+            </p>
+
+            <p>
+                或使用
+            </p>
+            <p class="code">
+                &lt;div class="clear"&gt;&lt;/div&gt;
+            </p>
+
+            <p>
+                来清除浮动。 连续写多个span，例如
+            </p>
+            <p class="code">
+                &lt;span class="img_list">&lt;/span&gt;<br>
+                &lt;span class="img_edit">&lt;/span&gt;<br>
+                &lt;span class="img_delete">&lt;/span&gt;<br>
+                &lt;div class="clear">&lt;/div&gt;
+            </p>
+            <p>
+                则创建一组图标，多用于表格中
+            </p>
+            <p>
+                <img src="assets/images/guide_27.png">
+            </p>
+            <p>2、创建含有文字的图标 生成不带文字的单独图标，使用icon_xxx。例如：</p>
+            <p class="code">
+                &lt;span class="icon_edit"&gt;编辑&lt;/span&gt;
+            </p>
+            <p>
+                <img src="assets/images/guide_28.png">
+            </p>
+            <p>后面同样要加<br>
+                或</p>
+            <p>来清除浮动。 连续横排，多用于功能按钮区。例如：</p>
+
+            <p class="code">
+                &lt;li>&lt;span class="icon_home">系统首页&lt;/span&gt;&lt;/li&gt;<br>
+                &lt;li>&lt;b>&lt;/b>&lt;/li&gt;<br>
+                &lt;li>&lt;span class="icon_lock" onclick="lockScreen()">屏幕锁定&lt;/span&gt;&lt;/li&gt;<br>
+                &lt;li>&lt;b>&lt;/b&gt;&lt;/li&gt;<br>
+                &lt;li>&lt;span class="icon_user">个人中心&lt;/span&gt;&lt;/li&gt;<br>
+                &lt;li>&lt;b>&lt;/b&gt;&lt;/li><br>
+                &lt;li>&lt;span class="icon_exit" onclick="top.Dialog.confirm('确定要退出系统吗',function(){});">退出系统&lt;/span&gt;&lt;/li&gt;
+            </p>
+            <p>
+                <img src="assets/images/guide_29.png">
+            </p>
+            <p> 3、创建图标按钮 将span放到button标签中，即可创建图标按钮。例如</p>
+            <p class="code">
+                &lt;button type="button">&lt;span class="icon_save">保存&lt;/span>&lt;/button><br>
+                &lt;button type="button">&lt;span class="icon_delete">删除v/span>&lt;/button><br>
+                &lt;button type="button">&lt;span class="icon_find">查询&lt;/span>&lt;/button><br>
+                &lt;button type="button">&lt;span class="icon_edit">编辑&lt;/span>&lt;/button><br>
+                &lt;button type="button">&lt;span class="icon_ok">提交&lt;/span>&lt;/button><br>
+                &lt;button type="button">&lt;span class="icon_clear">重置&lt;/span>&lt;/button><br>
+                &lt;button type="button">&lt;span class="icon_no">取消&lt;/span>&lt;/button>
+            </p>
+            <p>
+                <img src="assets/images/guide_30.png">
+            </p>
+            <p>详见button组件</p>
+            <p>4、创建图标菜单 将span放到菜单项中，即可创建图标菜单。例如：</p>
+            <p class="code">
+                &lt;div class="popupMenu" style="width:50px;"><br>
+                &lt;div class="popupMenu_link"><br>
+                &lt;a href="javascript:;">操作 &lt;/a><br>
+                &lt;/div><br>
+                &lt;div class="popupMenu_con icon_con"><br>
+                &lt;a href="javascript:;"> &lt;span class="icon_add">新增 &lt;/span> &lt;/a><br>
+                &lt;a href="javascript:;"> &lt;span class="icon_edit">修改 &lt;/span> &lt;/a><br>
+                &lt;a href="javascript:;"> &lt;span class="icon_delete">删除 &lt;/span> &lt;/a><br>
+                &lt;a href="javascript:;"> &lt;span class="icon_view">查看 &lt;/span> &lt;/a><br>
+                &lt;div><br>
+                &lt;/div>
+            </p>
+            <p>
+                <img src="assets/images/guide_31.png">
+            </p>
+            <p>详见弹出菜单组件</p>
+            <p>5、创建quiGrid的图标工具栏</p>
+            <p class="code">
+                toolbar:{<br>
+                items:[<br>
+                {text: '新增', click: addUnit,    iconClass: 'icon_add'},<br>
+                { line : true },<br>
+                {text: '批量删除', click: deleteUnit, iconClass: 'icon_delete',disabled:true},<br>
+                { line : true },<br>
+                {text: '导入', click: showImportDialog, iconClass: 'icon_import',visible:false},<br>
+                { line : true,visible:false },<br>
+                {text: '导出当前页', click: exportPageData, iconClass: 'icon_export'},<br>
+                { line : true },<br>
+                {text: '导出全部', click: exportTotalData, iconClass: 'icon_export'}<br>
+                ]<br>
+                }
+            </p>
+            <p>
+                <img src="assets/images/guide_32.png">
+            </p>
+            <p>iconClass中可以是图标库中任意的图标，详见grid表格</p>
+
+            <p>6 、创建单独的图标工具条 把span放入图标工具条组件中，即可为工具栏添加图标按钮，代码如下：</p>
+            <p class="code">
+                &lt;button type="button">&lt;span class="icon_save">保存&lt;/span>&lt;/button><br>
+                &lt;button type="button">&lt;span class="icon_delete">删除v/span>&lt;/button><br>
+                &lt;button type="button">&lt;span class="icon_find">查询&lt;/span>&lt;/button><br>
+                &lt;button type="button">&lt;span class="icon_edit">编辑&lt;/span>&lt;/button><br>
+                &lt;button type="button">&lt;span class="icon_ok">提交&lt;/span>&lt;/button><br>
+                &lt;button type="button">&lt;span class="icon_clear">重置&lt;/span>&lt;/button><br>
+                &lt;button type="button">&lt;span class="icon_no">取消&lt;/span>&lt;/button>
+
+            </p>
+            <p>
+                <img src="assets/images/guide_33.png">
+            </p>
+            <p>详见图标工具条</p>
+            <p>7、条件过滤器设置图标</p>
+            <p>
+                <img src="assets/images/guide_34.png">
+            </p>
+
+            <p>条件过滤器的图标主要是由数据控制的，数据格式如下：</p>
+            <p class="code">
+                {"list":[{"name":"部门1","list":[<br>
+                {"key":"员工1","value":"11","iconClass":"icon_user"},<br>
+                {"key":"员工2","value":"12","iconClass":"icon_user"},<br>
+                {"key":"员工3","value":"13","iconClass":"icon_user_female"},<br>
+                {"key":"员工2","value":"12","iconClass":"icon_user"},<br>
+                {"key":"员工3","value":"13","iconClass":"icon_user"}]},<br>
+                {"name":"部门2","list":[<br>
+                {"key":"员工4","value":"21","iconClass":"icon_user_female"},<br>
+                {"key":"员工5","value":"22","iconClass":"icon_user"},<br>
+                {"key":"员工6","value":"23","iconClass":"icon_user_worker"}]},<br>
+                {"name":"部门3","list":[<br>
+                {"key":"员工1","value":"11","iconClass":"icon_user"},<br>
+                {"key":"员工2","value":"12","iconClass":"icon_user"},<br>
+                {"key":"员工3","value":"13","iconClass":"icon_user"},<br>
+                {"key":"员工2","value":"12","iconClass":"icon_user"},<br>
+                {"key":"员工3","value":"13","iconClass":"icon_user"}]},<br>
+                {"name":"部门4","list":[<br>
+                {"key":"员工4","value":"21","iconClass":"icon_user"},<br>
+                {"key":"员工5","value":"22","iconClass":"icon_user"},<br>
+                {"key":"员工6","value":"23","iconClass":"icon_user"}]}]}
+            </p>
+            <p>8、直接使用图片 例如可以直接使用小图标图片作为树节点的图标</p>
+            <p>如果图标不够用，可以访问iconfont.cn搜索和下载png小图标</p>
+
+        </div>
+    </div>
+
+</main>
+
+</body>
+</html>

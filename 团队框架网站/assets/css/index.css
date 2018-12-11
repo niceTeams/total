@@ -1,0 +1,264 @@
+/* header */
+.header{
+    width:1200px;
+    margin:0 auto;
+    overflow: hidden;
+}
+/* header-logoBox */
+.header .logoBox{
+    float: left;
+    overflow: hidden;
+}
+.logoBox .logoImg{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 10px 0;
+    margin-right: 10px;
+}
+.logoBox .logoText{
+    font-size: 50px;
+    float: left;
+    line-height:120px;
+    margin-left:10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.logoText .logo-Internet{
+    color:#076ce0;
+}
+.logoText .logo-Design{
+    color:#076ce0;
+}
+/* header-nav */
+.header .nav{
+    float: right;
+    overflow: hidden;
+}
+.nav .navHref{
+    display: block;
+    font-size:16px;
+    color:black;
+    padding:10px 15px;
+    border-bottom:3px solid #fff;
+    float: left;
+    margin:10px;
+    margin-top:30px;
+    min-width:50px;
+    text-align: center;
+}
+.nav .navHref:hover{
+    color:#076ce0;
+    border-bottom:3px solid #076ce0;
+}
+.nav .hoverHref{
+    color:#076ce0;
+    border-bottom:3px solid #076ce0;
+}
+
+/* swiper */
+.swiper-container {
+    width: 100%;
+    height:750px;
+}
+.swiper-slide img{
+    width:100%;
+    height:100%;
+}
+
+/*section*/
+.section{
+    background-color: #ffffff;
+    overflow: hidden;
+}
+.my-service{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.my-service .ser_content{
+    text-align: center;
+    margin:30px auto;
+}
+.ser_content .serWhite{
+    margin:10px auto;
+    height:360px;
+}
+.ser_content h1{
+    font-size:32px;
+    color:#000;
+    margin-bottom:16px;
+}
+.ser_content span{
+    display: block;
+    font-size: 16px;
+    color:#666666;
+}
+.ser_content .blue_line{
+    font-size:22px;
+   color:rgb(51, 128, 255);
+}
+.my-service .ser_wrap{
+    width:80%;
+    justify-content: space-around;
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+    margin:0 auto;
+}
+.ser_wrap .ser_list{
+    width: 230px;
+    float: left;
+    text-align: center;
+    margin-right:87px;
+    box-sizing: border-box;
+}
+.ser_list img{
+    width: 112px;
+    height:111px;
+    margin-left:58px;
+}
+.ser_list h3{
+    font-size: 20px;
+    color:rgb(53, 53, 53);
+    padding:20px;
+}
+.ser_list .line{
+    width:60px;
+    height:2px;
+    background-color:rgb(51, 128, 255);
+    margin:0 auto;
+    margin-bottom: 5px;
+}
+.ser_list span{
+    display: block;
+    font-size: 14px;
+    color:#666;
+    line-height: 28px;
+    margin-bottom:15px;
+}
+.ser_wrap .ser_list:last-child{
+    margin-right:0;
+}
+.service-case{
+    background-color: #f7f7f7;
+}
+.ser_wrap .small_img{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom:50px;
+}
+.ser_wrap .small_img img{
+    width:35%;
+    height:100%;
+}
+.fullContent{
+    width:100%;
+    position: relative;
+    overflow: hidden;
+    padding-top:194px;
+}
+.fullContent img{
+    height:257px;
+}
+.fullContent .content_box{
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom:90px;
+
+}
+  .content_count  span{
+    display: block;
+    font-size:36px;
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+.content_count span:last-child{
+    font-size: 16px;
+    margin-top:14px;
+    font-weight: normal;
+}
+.ser_wrap_box{
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    margin-left: 48px;
+    flex-wrap: wrap;
+}
+.ser_wrap_box .intr_box{
+    width: 30%;
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.intr_box img{
+    width:33px;
+    height:30px;
+}
+.intr_name span{
+    display: block;
+    font-size: 14px;
+    color: #666666;
+    margin-bottom:15px;
+}
+.intr_name span:first-child{
+    font-size: 23px;
+    color: rgb(33, 33, 33);
+}
+.two_page{
+    width:100%;
+}
+.two_page img{
+    width:100%;
+}
+/* bodyFooter */
+.bodyFooter{
+    width:100%;
+    background-color:black;
+}
+.footer{
+    width:70%;
+    background-color:black;
+    color:white;
+    overflow: hidden;
+    margin:0 auto;
+    padding-top:30px;
+    display: flex;
+    justify-content: space-around;
+}
+.footer .footerUl{
+    width:150px;
+    margin:0 30px;
+    text-align: center;
+}
+.footerUl .thick{
+    font-weight: bold;
+    margin-bottom:15px;
+    font-size:20px;
+}
+.footer li a{
+    display: block;
+    font-size:18px;
+    color:white;
+    margin-bottom:10px;
+}
+.footer .contact{
+    float: right;
+    font-size:16px;
+}
+.contact p{
+    margin-bottom:10px;
+}
+.contact img{
+    width:125px;
+    height:125px;
+    text-align: center;
+    margin:0 auto 10px;
+}
+.contact .group{
+    color:yellow;
+    text-align: center;
+}

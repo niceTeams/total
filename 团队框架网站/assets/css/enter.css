@@ -1,0 +1,73 @@
+@charset "utf-8";
+.left{
+    position: fixed;
+    left:50px;
+    bottom: 50px;
+}
+.left img{
+    width:250px;
+    height:210px;
+}
+.loginBox{
+    text-align:center;
+    padding-top:50px;
+}
+.loginBox .loginImg{
+    margin:0 auto;
+    width:200px;
+    height:200px;
+}
+.loginBox .import{
+    position: relative;
+    width:600px;
+    margin:0 auto;
+}
+.import .importText{
+    width:400px;
+    border:none;
+    outline:none;
+    padding:15px 0;
+    border-bottom:1px solid #999;
+    margin:10px 0;
+    font-size:16px;
+}
+.import .hint{
+    position: absolute;
+    top:25px;
+    right:25px;
+    color: #e6614f;
+    padding-left: 10px;
+    font-size:16px;
+}
+.loginBox .loginBtn{
+    display: block;
+    width:400px;
+    height:50px;
+    margin:0 auto;
+    font-size:20px;
+    color:white;
+    background-color: #4385F8;
+    text-align: center;
+    line-height:50px;
+    border-radius:5px;
+    margin-top:20px;
+}
+.loginBox .enterHref{
+    font-size:16px;
+    margin:10px 0;
+    display: block;
+}
+.enterHref span{
+    color:#4385F8;
+    text-decoration:underline;
+}
+
+.right{
+    position: fixed;
+    right:0;
+    bottom: 0;
+}
+.right img{
+    width:320px;
+    height:490px;
+}

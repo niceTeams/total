@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>component-app7-preview</title>
+<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+<link rel="stylesheet" type="text/css" href="css/component-app7-preview.css" />
+</head>
+<body>
+    <div id="timeBox">
+        <span id="hour">00</span>:
+        <span id="minutes">00</span>:
+        <span id="seconds">00</span>
+    </div>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/vue.js"></script>
+<script>
+    function $(id){
+		return document.getElementById(id);
+	}
+	var hours=1;
+	var minutes=10;
+	var seconds=20;
+	var myTime=null;
+	function begins(){
+		if(myTime!=null){
+			return;
+		}
+		myTime=setInterval(function(){
+			seconds--;
+			if(seconds==0){
+				minutes--;
+				if(minutes==0){
+					hours--;					
+					minutes=59;
+					if(hours==0){					
+						minutes--;
+						if(minutes==0){
+							minutes=0;
+							seconds--;
+						}
+					}
+				hours=0;
+				}	
+			
+			seconds=59;			
+			}
+			
+			$("seconds").innerHTML=seconds<10?"0"+seconds:seconds;
+			$("minutes").innerHTML=minutes<10?"0"+minutes:minutes;
+			$("hour").innerHTML=hours<10?"0"+hours:hours;	
+		
+		},1000);	
+	}
+
+	// function stops(){
+	// 	clearInterval(myTime);
+	// 	myTime=null;
+	// }
+	
+	// function reserts(){
+	// 	clearInterval(myTime);
+	// 	myTime=null;
+	// 	hours=1;
+	// 	minutes=10;
+	// 	seconds=20;
+	// 	$("miao").innerHTML=seconds<10?"0"+seconds:seconds;
+	// 	$("fen").innerHTML=minutes<10?"0"+minutes:minutes;
+	// 	$("shi").innerHTML=hours<10?"0"+hours:hours;	
+	// }
+    window.onload = function(){
+        begins();
+    }
+</script>

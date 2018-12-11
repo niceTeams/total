@@ -1,0 +1,33 @@
+@charset "utf-8";
+/*CSS Document*/
+body,div,p,ul,ol,li,dl,dt,dd,form,table,tr,td,hr,h1,h2,h3,h4,h5,h6,fieldset,input,figure{
+    margin:0;
+    padding:0;
+}
+html,body{
+    width:100%;
+    height: 100%;
+}
+html{
+    font-size: 26.67vw;
+}
+body{
+    font-family:"微软雅黑",Arial;
+    display: -webkit-flex;
+    flex-direction: column;
+    font-size:.2rem;
+}
+ul,ol{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+img{
+    border:0;
+    display: block;
+}
+.contentBox{
+    flex:1;
+    overflow:scroll;
+}

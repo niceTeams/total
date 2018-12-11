@@ -1,0 +1,49 @@
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,p,a,img,ul,li,ol,dl,dt,dd,input{ padding:0; margin:0}
+ul,ol{ list-style:none;}
+img{ display:block; border:0;}
+a{ font-size:12px;text-decoration:none; color:#6c6c6c;}
+input{ outline:none;}
+img{ display:block; border:0;}
+body{ font-size:12px; color:black; background: #fff}
+a{ font-size:12px;text-decoration:none; color:black;}
+.l{ float:left;}
+.r{ float:right}
+.w{width:1200px;margin:0 auto}
+header,nav,main,aside,article,footer,figure,figcaption,section{ display:block;}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/ 
+::-webkit-scrollbar{
+    width:3px;
+    background-color: #999; 
+}
+
+/*定义滚动条轨道 内阴影+圆角*/ 
+::-webkit-scrollbar-track{
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  */
+    background-color: #F5F5F5; 
+}
+   
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb{
+    border-radius: 5px; 
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  */
+    background-color: #999; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

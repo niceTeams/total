@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>app1-preview</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/public.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/component-app3-preview.css"/>
+</head>
+<body>
+    <br/>
+    <div id="app">
+    <div class="nice-tab">
+        <ul>
+            <li v-for="(item,index) in tabs" :class="{active:index == num}"  @click="tab(index)">{{item}}</li>
+        </ul>
+    <div class="nice-tab-wrap">
+        <div class="nice-tab-con" v-for='(itemCon,index) in tabContents' v-show=" index == num">{{itemCon}}</div>
+    </div>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="js/vue.js"></script>
+<script>
+ var vm = new Vue({
+        el: '#app',
+        data: {
+            tabs: ["标题一", "标题二"],
+            tabContents: [
+                "标题一的内容",
+                "标题二的内容"
+            ],
+            num: 0
+        },
+        methods: {
+            tab(index) {
+                this.num = index;
+            }
+        }
+    });
+</script>

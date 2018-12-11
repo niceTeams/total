@@ -1,0 +1,49 @@
+<!--html部分-->
+    <div class="contentBox">
+        <a href="#" class="box1-button">
+            <span>&nbsp;&nbsp;规格</span>
+            <span>&gt;&nbsp;&nbsp;</span>
+        </a>
+        <a href="#" class="box2-button">
+            <span>&nbsp;&nbsp;参数</span>
+            <span>&gt;&nbsp;&nbsp;</span>
+        </a>
+        <div class="box1">
+            <h3 class="box1-title">
+                颜色
+                <a href="#" class="close1">×</a>
+            </h3>
+            <div class="selectBox">
+                <a href="#" class="select">白色</a>
+                <a href="#" class="select">黑色</a>
+                <a href="#" class="select">红色</a>
+                <a href="#" class="select">蓝色</a>
+                <a href="#" class="select">绿色</a>
+                <a href="#" class="select">橙色</a>
+                <a href="#" class="select">黄色</a>
+                <a href="#" class="select">紫色</a>
+            </div>
+            <p class="box1-bottom">加入购物车</p>
+        </div>
+        <div class="box2">
+            <h3 class="box2-title">
+                产品参数
+                <a href="#" class="close2">×</a>
+            </h3>
+            <div class="parameterBox">
+                <span>商品编码</span>
+                <span>00000000000</span>
+            </div>
+            <div class="parameterBox">
+                <span>型号</span>
+                <span>A1</span>
+            </div>
+            <div class="parameterBox">
+                <span>类别</span>
+                <span>其他</span>
+            </div>
+            <p class="box2-bottom">确定</p>
+        </div>
+    </div>
+
+//js部分
